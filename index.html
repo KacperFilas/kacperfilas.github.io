@@ -7,32 +7,39 @@
   <meta name="description" content="Kacper Filas: Technical Artist. Shadery, VFX, narzędzia, optymalizacja mobile, level i environment art w Unity i Unreal Engine 5.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <a class="logo" href="#">Kacper Filas</a>
+  <div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="top glass">
+    <a class="logo" href="#">KF</a>
     <nav>
       <a href="#prace">Prace</a>
       <a href="#o-mnie">O mnie</a>
-      <a href="#kontakt">Kontakt</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <video class="hero-bg" src="gallery/cathedral/mainshot.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
-      <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <p class="corner tl">Shaders. Tools. VFX.<br>Optimization.</p>
-      <p class="corner tr">Wrocław, PL<br>Ten Square Games</p>
       <div class="hero-text">
-        <p class="eyebrow">Portfolio</p>
-        <h1>Technical <span>Artist</span></h1>
+        <p class="pill glass"><span class="dot"></span>Level &amp; Technical Artist · Ten Square Games</p>
+        <h1>Kacper <span>Filas</span></h1>
         <p class="lead">Łączę grafikę z techniką. Shadery, VFX, narzędzia dla artystów oraz level i environment art w Unity i Unreal Engine 5.</p>
+        <div class="cta">
+          <a class="btn" href="#prace">Zobacz prace</a>
+          <a class="btn glass" href="#kontakt">Kontakt</a>
+        </div>
+        <ul class="chips">
+          <li class="glass">Unity</li><li class="glass">Unreal Engine 5</li><li class="glass">HLSL</li><li class="glass">VFX</li><li class="glass">Mobile</li>
+        </ul>
       </div>
-      <a class="corner bl scroll" href="#prace">Zobacz prace ↓</a>
-      <p class="corner br">Unity · UE5 · Blender</p>
+      <figure class="hero-media glass">
+        <video src="gallery/cathedral/mainshot.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+        <figcaption class="glass"><b>Cathedral in a cave</b><span>Unreal Engine 5 · projekt osobisty</span></figcaption>
+      </figure>
     </section>
 
     <section id="prace" class="section">
@@ -76,7 +83,6 @@
             <a class="as-link" href="https://www.artstation.com/artwork/x3yvqm">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-
         <article class="work s-2x2">
           <button class="work-cover">
             <img src="gallery/niagara-vfx/cover.jpg" alt="" loading="lazy">
@@ -95,11 +101,42 @@
             <a class="as-link" href="https://www.artstation.com/artwork/XJ0VBa">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-
+        <article class="work s-4x2">
+          <button class="work-cover">
+            <img src="gallery/scatter-tool/viewport.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">03</span><span class="work-title">Tree Scatter Tool — Blender → Unity</span><span class="work-tags">Geometry Nodes · Python · Unity</span></span>
+          </button>
+          <template>
+            <p>Narzędzie do rozsypywania drzew i roślinności po terenie w Blenderze, z eksportem do Unity. Geometry Nodes rozkłada punkty z kontrolą gęstości (atrybut malowany na terenie), maksymalnego nachylenia i minimalnego odstępu, losuje asset z kolekcji i ustawia skalę oraz offset Z osobno dla każdego assetu. Rotacja jest losowa albo skierowana w stronę wskazanego obiektu.</p>
+            <p>Add-on w Pythonie (panel „Scatter To Unity”) trzyma tabelę skal i offsetów per asset i jednym przyciskiem eksportuje pozycje, kierunek i skalę każdej instancji do JSON-a, który czyta importer w edytorze Unity.</p>
+            <p class="soft">Blender Geometry Nodes · Python (bpy) · Unity Editor tooling</p>
+            <img src="gallery/scatter-tool/viewport.jpg" alt="Drzewa i krzewy rozsypane po terenie w Blenderze">
+            <img src="gallery/scatter-tool/viewport-panel.jpg" alt="Panel add-onu Scatter To Unity z tabelą skal per asset">
+            <img src="gallery/scatter-tool/nodes-overview.jpg" alt="Całe drzewo Geometry Nodes podzielone na sekcje">
+            <img src="gallery/scatter-tool/nodes-asset-surface.jpg" alt="Sekcje wyboru assetu i rozkładu punktów na powierzchni">
+            <img src="gallery/scatter-tool/nodes-scale-rotation.jpg" alt="Sekcje skali per asset i rotacji">
+          </template>
+        </article>
+        <article class="work s-2x2">
+          <button class="work-cover">
+            <img src="gallery/fm2-tank/render1.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">04</span><span class="work-title">Front Mission 2 Remake — Tank</span><span class="work-tags">Blender · Substance · Unity</span></span>
+          </button>
+          <template>
+            <p>Model zaprojektowany i wykonany do remake'u Front Mission 2 na Nintendo Switch.</p>
+            <p class="soft">Blender · Unity · Marmoset Toolbag · Substance 3D Painter · RizomUV · Photoshop</p>
+            <img src="gallery/fm2-tank/render1.jpg" alt="Czołg, render 1">
+            <img src="gallery/fm2-tank/render2.jpg" alt="Czołg, render 2">
+            <img src="gallery/fm2-tank/render3.jpg" alt="Czołg, render 3">
+            <img src="gallery/fm2-tank/screenshot-1.jpg" alt="Czołg w grze">
+            <img src="gallery/fm2-tank/kompo-1.jpg" alt="Czołg, kompozycja">
+            <a class="as-link" href="https://www.artstation.com/artwork/03wanY">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
         <article class="work s-3x2">
           <button class="work-cover">
             <img src="gallery/fm2-series/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">03</span><span class="work-title">Front Mission 2 Remake — Tank Series</span><span class="work-tags">Blender · Substance · Unity</span></span>
+            <span class="work-meta"><span class="idx">05</span><span class="work-title">Front Mission 2 Remake — Tank Series</span><span class="work-tags">Blender · Substance · Unity</span></span>
           </button>
           <template>
             <p>Seria czołgów, które zaprojektowałem i wykonałem do remake'u Front Mission 2 na Nintendo Switch.</p>
@@ -114,11 +151,10 @@
             <a class="as-link" href="https://www.artstation.com/artwork/o250JL">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-
         <article class="work s-3x2">
           <button class="work-cover">
             <img src="gallery/desert/render1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">04</span><span class="work-title">Desert Environment</span><span class="work-tags">Unreal Engine · Substance Designer</span></span>
+            <span class="work-meta"><span class="idx">06</span><span class="work-title">Desert Environment</span><span class="work-tags">Unreal Engine · Substance Designer</span></span>
           </button>
           <template>
             <p>Pustynne środowisko w Unreal Engine.</p>
@@ -131,28 +167,10 @@
             <a class="as-link" href="https://www.artstation.com/artwork/L4B8Jk">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-
-        <article class="work s-2x2">
-          <button class="work-cover">
-            <img src="gallery/fm2-tank/render1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">05</span><span class="work-title">Front Mission 2 Remake — Tank</span><span class="work-tags">Blender · Substance · Unity</span></span>
-          </button>
-          <template>
-            <p>Model zaprojektowany i wykonany do remake'u Front Mission 2 na Nintendo Switch.</p>
-            <p class="soft">Blender · Unity · Marmoset Toolbag · Substance 3D Painter · RizomUV · Photoshop</p>
-            <img src="gallery/fm2-tank/render1.jpg" alt="Czołg, render 1">
-            <img src="gallery/fm2-tank/render2.jpg" alt="Czołg, render 2">
-            <img src="gallery/fm2-tank/render3.jpg" alt="Czołg, render 3">
-            <img src="gallery/fm2-tank/screenshot-1.jpg" alt="Czołg w grze">
-            <img src="gallery/fm2-tank/kompo-1.jpg" alt="Czołg, kompozycja">
-            <a class="as-link" href="https://www.artstation.com/artwork/03wanY">Zobacz na ArtStation ↗</a>
-          </template>
-        </article>
-
         <article class="work s-2x1">
           <button class="work-cover">
             <img src="gallery/chaos-vehicle/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">06</span><span class="work-title">Chaos Vehicle — wsiadanie i wysiadanie</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
+            <span class="work-meta"><span class="idx">07</span><span class="work-title">Chaos Vehicle — wsiadanie i wysiadanie</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
           </button>
           <template>
             <p>Mechanika wsiadania i wysiadania z pojazdu na systemie Chaos Vehicle w Unreal Engine.</p>
@@ -162,11 +180,10 @@
             <a class="as-link" href="https://www.artstation.com/artwork/8Bg1Ox">Pełne wideo na ArtStation ↗</a>
           </template>
         </article>
-
         <article class="work s-2x1">
           <button class="work-cover">
             <img src="gallery/platformer/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">07</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
+            <span class="work-meta"><span class="idx">08</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
           </button>
           <template>
             <p>Mechaniki platformówki 2D: sterowanie, animacje postaci i przeciwników, behaviour tree.</p>
@@ -181,11 +198,10 @@
             <a class="as-link" href="https://www.artstation.com/artwork/98VAPa">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-
         <article class="work s-2x1">
           <button class="work-cover">
             <img src="gallery/heater/back.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">08</span><span class="work-title">Heater Prop</span><span class="work-tags">Blender · Substance · Unity</span></span>
+            <span class="work-meta"><span class="idx">09</span><span class="work-title">Heater Prop</span><span class="work-tags">Blender · Substance · Unity</span></span>
           </button>
           <template>
             <p>Game-ready props do gry On The Road.</p>
@@ -197,7 +213,7 @@
           </template>
         </article>
 
-        <a class="work s-2x1 more" href="https://www.artstation.com/kacperfilas">
+        <a class="work s-6x1 more" href="https://www.artstation.com/kacperfilas">
           <span>Więcej na ArtStation ↗</span>
         </a>
       </div>
@@ -209,11 +225,11 @@
         <p>Level &amp; Technical Artist</p>
       </div>
       <div class="about">
-        <div class="about-text">
+        <div class="about-text glass">
           <p class="big">Piszę narzędzia i shadery, które przyspieszają pracę artystów, i pilnuję, żeby gra wyglądała dobrze nawet na słabym telefonie.</p>
           <p>W Ten Square Games tworzę narzędzia edytorowe, skrypty automatyzujące i workflowy PBR, piszę shadery i optymalizuję materiały oraz assety pod sprzęt mobilny. Robię też level art, VFX i animacje w Unity. Wcześniej budowałem środowiska z danych przestrzennych (GIS, LiDAR, Gaea) w Unity i UE5, robiłem levele i VFX do remake'ów Donkey Kong Country Returns i Front Mission, a zaczynałem od sculptingu skanów 3D w ZBrushu.</p>
         </div>
-        <ol class="timeline">
+        <ol class="timeline glass">
           <li><span>2025 —</span><b>Ten Square Games</b><em>Level &amp; Technical Artist</em></li>
           <li><span>2024 — 2025</span><b>YSLAB</b><em>Level &amp; Environment Artist</em></li>
           <li><span>2023 — 2024</span><b>Ten Square Games</b><em>3D Artist</em></li>
@@ -223,15 +239,15 @@
       </div>
 
       <div class="skills">
-        <div class="skill"><h3>Silniki</h3><p>Unity (Animator, Timeline, Particle System, VFX Graph), Unreal Engine 5 (Niagara, Blueprints)</p></div>
-        <div class="skill"><h3>Tech art</h3><p>HLSL, C#, Python, narzędzia edytorowe, automatyzacja, optymalizacja mobile, profilowanie scen</p></div>
-        <div class="skill"><h3>3D</h3><p>Blender, ZBrush, 3DCoat, Substance Painter i Designer, Marmoset, RizomUV, retopologia, rigging</p></div>
-        <div class="skill"><h3>Pipeline</h3><p>Gaea, GIS, fotogrametria, ComfyUI, pipeline'y z AI, Git, Plastic SCM, dokumentacja</p></div>
+        <div class="skill glass"><h3>Silniki</h3><p>Unity (Animator, Timeline, Particle System, VFX Graph), Unreal Engine 5 (Niagara, Blueprints)</p></div>
+        <div class="skill glass"><h3>Tech art</h3><p>HLSL, C#, Python, narzędzia edytorowe, automatyzacja, optymalizacja mobile, profilowanie scen</p></div>
+        <div class="skill glass"><h3>3D</h3><p>Blender, ZBrush, 3DCoat, Substance Painter i Designer, Marmoset, RizomUV, retopologia, rigging</p></div>
+        <div class="skill glass"><h3>Pipeline</h3><p>Gaea, GIS, fotogrametria, ComfyUI, pipeline'y z AI, Git, Plastic SCM, dokumentacja</p></div>
       </div>
     </section>
 
-    <section id="kontakt" class="section contact">
-      <div class="glow" aria-hidden="true"></div>
+    <section id="kontakt" class="section">
+      <div class="contact glass">
       <p class="eyebrow">Kontakt</p>
       <a class="mail" href="mailto:kacperfilas1@gmail.com">kacperfilas1@gmail.com</a>
       <ul class="links">
@@ -240,18 +256,21 @@
         <li><a href="https://github.com/KacperFilas">GitHub ↗</a></li>
       </ul>
       <p class="soft">Narzędzia open source: <a href="https://github.com/KacperFilas/Setup-Toon-Shader">Setup-Toon-Shader</a>, <a href="https://github.com/KacperFilas/Export-Collection-Blender">Export-Collection-Blender</a> (add-ony do Blendera).</p>
+      </div>
     </section>
   </main>
 
   <footer><span>© Kacper Filas</span><span>Wrocław, Polska</span></footer>
 
   <dialog id="project" aria-labelledby="project-title">
-    <div class="project-head">
-      <span class="idx"></span>
-      <h2 id="project-title"></h2>
-      <form method="dialog"><button class="close" aria-label="Zamknij">×</button></form>
+    <div class="project-panel glass">
+      <div class="project-head">
+        <span class="idx"></span>
+        <h2 id="project-title"></h2>
+        <form method="dialog"><button class="close" aria-label="Zamknij">×</button></form>
+      </div>
+      <div class="project-body"></div>
     </div>
-    <div class="project-body"></div>
   </dialog>
 
   <script>
@@ -269,7 +288,7 @@
     dlg.addEventListener('close', () => body.replaceChildren());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelector('.hero-bg').pause();
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video[autoplay]').forEach(v => v.pause());
   </script>
 </body>
 </html>
