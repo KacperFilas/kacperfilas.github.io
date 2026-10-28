@@ -4,120 +4,272 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kacper Filas — Technical Artist</title>
-  <meta name="description" content="Kacper Filas: Technical Artist. Shadery, narzędzia, optymalizacja mobile, level i environment art w Unity i UE5.">
+  <meta name="description" content="Kacper Filas: Technical Artist. Shadery, VFX, narzędzia, optymalizacja mobile, level i environment art w Unity i Unreal Engine 5.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
-    <a class="logo" href="#">KF</a>
+    <a class="logo" href="#">Kacper Filas</a>
     <nav>
+      <a href="#prace">Prace</a>
       <a href="#o-mnie">O mnie</a>
-      <a href="#galeria">Galeria</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">Technical Artist · Wrocław</p>
-      <h1>Kacper Filas</h1>
-      <p class="lead">Łączę grafikę z techniką: shadery, narzędzia dla artystów, optymalizacja na mobile oraz level i environment art w Unity i Unreal Engine 5.</p>
-      <a class="btn" href="#galeria">Zobacz prace</a>
-    </section>
-
-    <section id="o-mnie">
-      <h2>O mnie</h2>
-      <div class="about">
-        <div>
-          <p>Jestem Level &amp; Technical Artistem w Ten Square Games. Piszę narzędzia edytorowe i skrypty automatyzujące pracę artystów, tworzę shadery i optymalizuję materiały oraz assety pod sprzęt mobilny. Robię też level art, VFX i animacje w Unity.</p>
-          <p>Wcześniej budowałem środowiska z danych przestrzennych (GIS, LiDAR, Gaea) w Unity i UE5 w YSLAB, robiłem levele i VFX do remake'ów Donkey Kong Country Returns i Front Mission w Forever Entertainment, a karierę zaczynałem od sculptingu skanów 3D w ZBrushu.</p>
-
-          <ol class="timeline">
-            <li><b>Ten Square Games</b> Level &amp; Technical Artist <span>2025 – teraz</span></li>
-            <li><b>YSLAB</b> Level &amp; Environment Artist <span>2024 – 2025</span></li>
-            <li><b>Ten Square Games</b> 3D Artist <span>2023 – 2024</span></li>
-            <li><b>Forever Entertainment</b> Level &amp; VFX Artist <span>2022 – 2023</span></li>
-            <li><b>Scanologics</b> 3D Sculpting Artist <span>2021 – 2022</span></li>
-          </ol>
-        </div>
-        <ul class="tags">
-          <li>Unity</li><li>Unreal Engine 5</li><li>HLSL</li><li>C#</li><li>Python</li>
-          <li>VFX Graph</li><li>Niagara</li><li>Mobile optimization</li>
-          <li>Blender</li><li>ZBrush</li><li>Substance</li><li>Gaea</li><li>ComfyUI</li>
-        </ul>
+      <video class="hero-bg" src="gallery/cathedral/mainshot.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+      <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <p class="corner tl">Shaders. Tools. VFX.<br>Optimization.</p>
+      <p class="corner tr">Wrocław, PL<br>Ten Square Games</p>
+      <div class="hero-text">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Technical <span>Artist</span></h1>
+        <p class="lead">Łączę grafikę z techniką. Shadery, VFX, narzędzia dla artystów oraz level i environment art w Unity i Unreal Engine 5.</p>
       </div>
+      <a class="corner bl scroll" href="#prace">Zobacz prace ↓</a>
+      <p class="corner br">Unity · UE5 · Blender</p>
     </section>
 
-    <section id="galeria">
-      <h2>Galeria</h2>
+    <section id="prace" class="section">
+      <div class="section-head">
+        <h2>Wybrane prace</h2>
+        <p>Kliknij projekt, żeby zobaczyć więcej</p>
+      </div>
+
       <!--
-        Jak dodać pracę: wrzuć plik (JPG, PNG albo GIF) do folderu gallery/ i skopiuj blok:
-        <figure>
-          <img src="gallery/nazwa-pliku.gif" alt="Krótki opis" loading="lazy">
-          <figcaption>Podpis</figcaption>
-        </figure>
-        Nowy projekt = nowy <h3> + <div class="gallery">. gallery/placeholder.svg to zaślepka na czas, zanim będzie screen.
+        Jak dodać projekt: skopiuj cały <article class="work">.
+        - klasa s-4x2 / s-3x2 / s-2x2 / s-2x1 = rozmiar kafelka (kolumny x rzędy, siatka ma 6 kolumn)
+        - <img> w <button> to okładka kafelka
+        - <template> to zawartość okna projektu: <img> dla screenów i GIF-ów,
+          <video src="..." poster="..." autoplay muted loop playsinline> dla klipów MP4
+        Pliki trzymaj w gallery/nazwa-projektu/.
       -->
+      <div class="works">
+        <article class="work s-4x2">
+          <button class="work-cover">
+            <img src="gallery/cathedral/mainshot.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">01</span><span class="work-title">Cathedral in a cave</span><span class="work-tags">Unreal Engine · ZBrush · Substance</span></span>
+          </button>
+          <template>
+            <p>Projekt osobisty: realistyczne, klimatyczne środowisko budowane z myślą o wydajności w czasie rzeczywistym. Proceduralny grunge i uszkodzenia, tekstury world space i triplanar, vertex painting, wodospad.</p>
+            <p class="soft">Blender · Unreal Engine · ZBrush · Substance 3D Painter · Substance 3D Designer · Marmoset Toolbag · Photoshop</p>
+            <video src="gallery/cathedral/mainshot.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/cathedral/lakeshot.mp4" poster="gallery/cathedral/lakeshot.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/cathedral/anim1.mp4" poster="gallery/cathedral/anim1.jpg" autoplay muted loop playsinline></video>
+            <img src="gallery/cathedral/closeup.jpg" alt="Katedra w jaskini, zbliżenie">
+            <img src="gallery/cathedral/shot-1.jpg" alt="Katedra w jaskini, panorama">
+            <img src="gallery/cathedral/shot-2.jpg" alt="Katedra w jaskini, ujęcie szerokie">
+            <img src="gallery/cathedral/shot-3.jpg" alt="Katedra w jaskini, detal">
+            <ul class="vids">
+              <li><a href="https://www.youtube.com/watch?v=YoXil7sKsio">Gameplay</a></li>
+              <li><a href="https://www.youtube.com/watch?v=dhLYeP25dvk">Viewport</a></li>
+              <li><a href="https://www.youtube.com/watch?v=NhX2kwIJgeY">Proceduralny grunge i triplanar</a></li>
+              <li><a href="https://www.youtube.com/watch?v=qAY9vTjBjUo">Vertex painting</a></li>
+              <li><a href="https://www.youtube.com/watch?v=xJ8OgxUErLU">Materiały</a></li>
+              <li><a href="https://www.youtube.com/watch?v=KKnw8mZ08uI">Wodospad</a></li>
+            </ul>
+            <a class="as-link" href="https://www.artstation.com/artwork/x3yvqm">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
 
-      <h3>Cathedral in a cave <a href="https://www.artstation.com/artwork/x3yvqm">ArtStation</a></h3>
-      <p class="note">Projekt osobisty: realistyczne, klimatyczne środowisko z myślą o wydajności w czasie rzeczywistym. Wideo:
-        <a href="https://www.youtube.com/watch?v=YoXil7sKsio">gameplay</a>,
-        <a href="https://www.youtube.com/watch?v=dhLYeP25dvk">viewport</a>,
-        <a href="https://www.youtube.com/watch?v=NhX2kwIJgeY">proceduralny grunge i triplanar</a>,
-        <a href="https://www.youtube.com/watch?v=qAY9vTjBjUo">vertex painting</a>,
-        <a href="https://www.youtube.com/watch?v=xJ8OgxUErLU">materiały</a>,
-        <a href="https://www.youtube.com/watch?v=KKnw8mZ08uI">wodospad</a>.
-      </p>
-      <div class="gallery">
-        <figure><img src="gallery/cathedral-01.jpg" alt="Katedra w jaskini, widok ogólny" loading="lazy"></figure>
-        <figure><img src="gallery/cathedral-02.jpg" alt="Katedra w jaskini, ujęcie szerokie" loading="lazy"></figure>
-        <figure><img src="gallery/cathedral-03.jpg" alt="Katedra w jaskini, detal" loading="lazy"></figure>
-        <figure><img src="gallery/cathedral-04.jpg" alt="Katedra w jaskini, detal materiałów" loading="lazy"></figure>
-      </div>
+        <article class="work s-2x2">
+          <button class="work-cover">
+            <img src="gallery/niagara-vfx/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">02</span><span class="work-title">Niagara VFX</span><span class="work-tags">Unreal Engine · Niagara</span></span>
+          </button>
+          <template>
+            <p>Efekty zrobione w Unreal Engine 5 w systemie Niagara: cięcie ostrzem, energia, portal, meteor, miotacz ognia, wodospad, laser.</p>
+            <p class="soft">Unreal Engine · Niagara · Blender · Photoshop</p>
+            <video src="gallery/niagara-vfx/baldeslash.mp4" poster="gallery/niagara-vfx/baldeslash.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/niagara-vfx/energystrike.mp4" poster="gallery/niagara-vfx/energystrike.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/niagara-vfx/portal.mp4" poster="gallery/niagara-vfx/portal.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/niagara-vfx/meteor-strike.mp4" poster="gallery/niagara-vfx/meteor-strike.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/niagara-vfx/flamethrower.mp4" poster="gallery/niagara-vfx/flamethrower.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/niagara-vfx/waterfall.mp4" poster="gallery/niagara-vfx/waterfall.jpg" autoplay muted loop playsinline></video>
+            <video src="gallery/niagara-vfx/laserbeam.mp4" poster="gallery/niagara-vfx/laserbeam.jpg" autoplay muted loop playsinline></video>
+            <a class="as-link" href="https://www.artstation.com/artwork/XJ0VBa">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
 
-      <h3>Desert Environment <a href="https://www.artstation.com/artwork/L4B8Jk">ArtStation</a></h3>
-      <p class="note">Pustynne środowisko w Unreal Engine.</p>
-      <div class="gallery">
-        <figure><img src="gallery/desert-01.jpg" alt="Pustynia w Unreal Engine, ujęcie 1" loading="lazy"></figure>
-        <figure><img src="gallery/desert-02.jpg" alt="Pustynia w Unreal Engine, ujęcie 2" loading="lazy"></figure>
-        <figure><img src="gallery/desert-03.jpg" alt="Pustynia w Unreal Engine, ujęcie 3" loading="lazy"></figure>
-        <figure><img src="gallery/desert-04.jpg" alt="Pustynia w Unreal Engine, ujęcie 4" loading="lazy"></figure>
+        <article class="work s-3x2">
+          <button class="work-cover">
+            <img src="gallery/fm2-series/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">03</span><span class="work-title">Front Mission 2 Remake — Tank Series</span><span class="work-tags">Blender · Substance · Unity</span></span>
+          </button>
+          <template>
+            <p>Seria czołgów, które zaprojektowałem i wykonałem do remake'u Front Mission 2 na Nintendo Switch.</p>
+            <p class="soft">Blender · Unity · Marmoset Toolbag · Substance 3D Painter · RizomUV · Photoshop</p>
+            <img src="gallery/fm2-series/render-3.jpg" alt="Czołg z Front Mission 2, render">
+            <img src="gallery/fm2-series/render-4.jpg" alt="Czołg z Front Mission 2, render">
+            <img src="gallery/fm2-series/unity-1.jpg" alt="Czołg z Front Mission 2 w Unity">
+            <img src="gallery/fm2-series/render-1.jpg" alt="Czołg z Front Mission 2, render">
+            <img src="gallery/fm2-series/render-5.jpg" alt="Czołg z Front Mission 2, render">
+            <img src="gallery/fm2-series/unity-3.jpg" alt="Czołg z Front Mission 2 w Unity">
+            <img src="gallery/fm2-series/a33859b-kompo-1.jpg" alt="Czołg z Front Mission 2, kompozycja">
+            <a class="as-link" href="https://www.artstation.com/artwork/o250JL">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
+
+        <article class="work s-3x2">
+          <button class="work-cover">
+            <img src="gallery/desert/render1.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">04</span><span class="work-title">Desert Environment</span><span class="work-tags">Unreal Engine · Substance Designer</span></span>
+          </button>
+          <template>
+            <p>Pustynne środowisko w Unreal Engine.</p>
+            <p class="soft">Unreal Engine · Substance 3D Designer · Substance 3D Painter · Blender · ZBrush · Marmoset Toolbag · Photoshop</p>
+            <video src="gallery/desert/render1.mp4" poster="gallery/desert/render1.jpg" autoplay muted loop playsinline></video>
+            <img src="gallery/desert/1.jpg" alt="Pustynia, ujęcie 1">
+            <img src="gallery/desert/2.jpg" alt="Pustynia, ujęcie 2">
+            <img src="gallery/desert/3.jpg" alt="Pustynia, ujęcie 3">
+            <img src="gallery/desert/4.jpg" alt="Pustynia, ujęcie 4">
+            <a class="as-link" href="https://www.artstation.com/artwork/L4B8Jk">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
+
+        <article class="work s-2x2">
+          <button class="work-cover">
+            <img src="gallery/fm2-tank/render1.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">05</span><span class="work-title">Front Mission 2 Remake — Tank</span><span class="work-tags">Blender · Substance · Unity</span></span>
+          </button>
+          <template>
+            <p>Model zaprojektowany i wykonany do remake'u Front Mission 2 na Nintendo Switch.</p>
+            <p class="soft">Blender · Unity · Marmoset Toolbag · Substance 3D Painter · RizomUV · Photoshop</p>
+            <img src="gallery/fm2-tank/render1.jpg" alt="Czołg, render 1">
+            <img src="gallery/fm2-tank/render2.jpg" alt="Czołg, render 2">
+            <img src="gallery/fm2-tank/render3.jpg" alt="Czołg, render 3">
+            <img src="gallery/fm2-tank/screenshot-1.jpg" alt="Czołg w grze">
+            <img src="gallery/fm2-tank/kompo-1.jpg" alt="Czołg, kompozycja">
+            <a class="as-link" href="https://www.artstation.com/artwork/03wanY">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
+
+        <article class="work s-2x1">
+          <button class="work-cover">
+            <img src="gallery/chaos-vehicle/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">06</span><span class="work-title">Chaos Vehicle — wsiadanie i wysiadanie</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
+          </button>
+          <template>
+            <p>Mechanika wsiadania i wysiadania z pojazdu na systemie Chaos Vehicle w Unreal Engine.</p>
+            <p class="soft">Unreal Engine · Blueprints</p>
+            <video src="gallery/chaos-vehicle/nodes.mp4" poster="gallery/chaos-vehicle/nodes.jpg" autoplay muted loop playsinline></video>
+            <img src="gallery/chaos-vehicle/cover.jpg" alt="Pojazd w Unreal Engine">
+            <a class="as-link" href="https://www.artstation.com/artwork/8Bg1Ox">Pełne wideo na ArtStation ↗</a>
+          </template>
+        </article>
+
+        <article class="work s-2x1">
+          <button class="work-cover">
+            <img src="gallery/platformer/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">07</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
+          </button>
+          <template>
+            <p>Mechaniki platformówki 2D: sterowanie, animacje postaci i przeciwników, behaviour tree.</p>
+            <img src="gallery/platformer/cover.jpg" alt="Platformówka 2D, gameplay">
+            <ul class="vids">
+              <li><a href="https://www.youtube.com/watch?v=nP35rtMZbsk">Gameplay</a></li>
+              <li><a href="https://www.youtube.com/watch?v=WmUeNhUsOrw">Behaviour tree</a></li>
+              <li><a href="https://www.youtube.com/watch?v=79-9h46JWiY">Animacje postaci</a></li>
+              <li><a href="https://www.youtube.com/watch?v=HwtHyMv5gVQ">Animacje przeciwnika</a></li>
+              <li><a href="https://www.youtube.com/watch?v=27OqIJZiGGg">Blueprinty</a></li>
+            </ul>
+            <a class="as-link" href="https://www.artstation.com/artwork/98VAPa">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
+
+        <article class="work s-2x1">
+          <button class="work-cover">
+            <img src="gallery/heater/back.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">08</span><span class="work-title">Heater Prop</span><span class="work-tags">Blender · Substance · Unity</span></span>
+          </button>
+          <template>
+            <p>Game-ready props do gry On The Road.</p>
+            <p class="soft">Blender · Substance 3D Painter · RizomUV · Unity · Photoshop</p>
+            <img src="gallery/heater/back.jpg" alt="Grzejnik, tył">
+            <img src="gallery/heater/front.jpg" alt="Grzejnik, przód">
+            <img src="gallery/heater/side.jpg" alt="Grzejnik, bok">
+            <a class="as-link" href="https://www.artstation.com/artwork/QXKDKl">Zobacz na ArtStation ↗</a>
+          </template>
+        </article>
+
+        <a class="work s-2x1 more" href="https://www.artstation.com/kacperfilas">
+          <span>Więcej na ArtStation ↗</span>
+        </a>
       </div>
     </section>
 
-    <section id="kontakt">
-      <h2>Kontakt i linki</h2>
+    <section id="o-mnie" class="section">
+      <div class="section-head">
+        <h2>O mnie</h2>
+        <p>Level &amp; Technical Artist</p>
+      </div>
+      <div class="about">
+        <div class="about-text">
+          <p class="big">Piszę narzędzia i shadery, które przyspieszają pracę artystów, i pilnuję, żeby gra wyglądała dobrze nawet na słabym telefonie.</p>
+          <p>W Ten Square Games tworzę narzędzia edytorowe, skrypty automatyzujące i workflowy PBR, piszę shadery i optymalizuję materiały oraz assety pod sprzęt mobilny. Robię też level art, VFX i animacje w Unity. Wcześniej budowałem środowiska z danych przestrzennych (GIS, LiDAR, Gaea) w Unity i UE5, robiłem levele i VFX do remake'ów Donkey Kong Country Returns i Front Mission, a zaczynałem od sculptingu skanów 3D w ZBrushu.</p>
+        </div>
+        <ol class="timeline">
+          <li><span>2025 —</span><b>Ten Square Games</b><em>Level &amp; Technical Artist</em></li>
+          <li><span>2024 — 2025</span><b>YSLAB</b><em>Level &amp; Environment Artist</em></li>
+          <li><span>2023 — 2024</span><b>Ten Square Games</b><em>3D Artist</em></li>
+          <li><span>2022 — 2023</span><b>Forever Entertainment</b><em>Level &amp; VFX Artist</em></li>
+          <li><span>2021 — 2022</span><b>Scanologics</b><em>3D Sculpting Artist</em></li>
+        </ol>
+      </div>
+
+      <div class="skills">
+        <div class="skill"><h3>Silniki</h3><p>Unity (Animator, Timeline, Particle System, VFX Graph), Unreal Engine 5 (Niagara, Blueprints)</p></div>
+        <div class="skill"><h3>Tech art</h3><p>HLSL, C#, Python, narzędzia edytorowe, automatyzacja, optymalizacja mobile, profilowanie scen</p></div>
+        <div class="skill"><h3>3D</h3><p>Blender, ZBrush, 3DCoat, Substance Painter i Designer, Marmoset, RizomUV, retopologia, rigging</p></div>
+        <div class="skill"><h3>Pipeline</h3><p>Gaea, GIS, fotogrametria, ComfyUI, pipeline'y z AI, Git, Plastic SCM, dokumentacja</p></div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact">
+      <div class="glow" aria-hidden="true"></div>
+      <p class="eyebrow">Kontakt</p>
+      <a class="mail" href="mailto:kacperfilas1@gmail.com">kacperfilas1@gmail.com</a>
       <ul class="links">
-        <li><a href="mailto:kacperfilas1@gmail.com">kacperfilas1@gmail.com</a></li>
-        <li><a href="https://www.artstation.com/kacperfilas">ArtStation</a></li>
-        <li><a href="https://www.linkedin.com/in/kacper-filas-074a0b1b5">LinkedIn</a></li>
-        <li><a href="https://github.com/KacperFilas">GitHub</a></li>
+        <li><a href="https://www.artstation.com/kacperfilas">ArtStation ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/kacper-filas-074a0b1b5">LinkedIn ↗</a></li>
+        <li><a href="https://github.com/KacperFilas">GitHub ↗</a></li>
       </ul>
-      <h3>Narzędzia open source</h3>
-      <ul class="repos">
-        <li><a href="https://github.com/KacperFilas/Setup-Toon-Shader">Setup-Toon-Shader</a> add-on Blendera: Geometry Nodes + stylizowany materiał z zachowaniem tekstur</li>
-        <li><a href="https://github.com/KacperFilas/Export-Collection-Blender">Export-Collection-Blender</a> eksport kolekcji z Blendera jednym skrótem</li>
-        <li><a href="https://github.com/KacperFilas/3DGraphicsRenderer">3DGraphicsRenderer</a> renderer 3D napisany w C</li>
-      </ul>
+      <p class="soft">Narzędzia open source: <a href="https://github.com/KacperFilas/Setup-Toon-Shader">Setup-Toon-Shader</a>, <a href="https://github.com/KacperFilas/Export-Collection-Blender">Export-Collection-Blender</a> (add-ony do Blendera).</p>
     </section>
   </main>
 
-  <footer>© Kacper Filas</footer>
+  <footer><span>© Kacper Filas</span><span>Wrocław, Polska</span></footer>
 
-  <dialog id="lightbox" aria-label="Podgląd pracy">
-    <img alt="">
-    <form method="dialog"><button aria-label="Zamknij">×</button></form>
+  <dialog id="project" aria-labelledby="project-title">
+    <div class="project-head">
+      <span class="idx"></span>
+      <h2 id="project-title"></h2>
+      <form method="dialog"><button class="close" aria-label="Zamknij">×</button></form>
+    </div>
+    <div class="project-body"></div>
   </dialog>
 
   <script>
-    // Klik na pracę otwiera ją w pełnym rozmiarze; Esc lub klik w tło zamyka.
-    const box = document.getElementById('lightbox');
-    document.querySelectorAll('.gallery img').forEach(img => img.addEventListener('click', () => {
-      box.querySelector('img').src = img.src;
-      box.querySelector('img').alt = img.alt;
-      box.showModal();
+    // Klik w kafelek: zawartość <template> trafia do okna, więc wideo ładuje się dopiero po otwarciu.
+    const dlg = document.getElementById('project');
+    const body = dlg.querySelector('.project-body');
+    document.querySelectorAll('.work-cover').forEach(btn => btn.addEventListener('click', () => {
+      const work = btn.closest('.work');
+      dlg.querySelector('.idx').textContent = work.querySelector('.idx').textContent;
+      dlg.querySelector('h2').textContent = work.querySelector('.work-title').textContent;
+      body.replaceChildren(work.querySelector('template').content.cloneNode(true));
+      dlg.showModal();
+      dlg.scrollTop = 0;
     }));
-    box.addEventListener('click', e => { if (e.target === box) box.close(); });
+    dlg.addEventListener('close', () => body.replaceChildren());
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelector('.hero-bg').pause();
   </script>
 </body>
 </html>

@@ -14,11 +14,14 @@ i wejdź na http://127.0.0.1:8765
 
 ## Dodawanie i podmiana prac
 
-1. Wrzuć plik (JPG, PNG, GIF) do `gallery/`. Najlepiej 16:9, do ~2 MB (duże GIF-y spowalniają stronę).
-2. W `index.html`, w sekcji `#galeria`, skopiuj blok `<figure>` i zmień `src` oraz `alt`.
-3. Nowy projekt: nowy `<h3>` + `<p class="note">` + `<div class="gallery">` (wzór jest w komentarzu w HTML).
+Każdy projekt to jeden blok `<article class="work">` w sekcji `#prace` w `index.html` (wzór i opis są w komentarzu nad siatką).
 
-`gallery/placeholder.svg` to zaślepka na czas, zanim będzie screen.
+1. Pliki wrzuć do `gallery/nazwa-projektu/`. Screeny jako JPG/PNG, animacje najlepiej jako krótkie MP4 (lżejsze od GIF-ów); GIF też zadziała jako `<img>`.
+2. Skopiuj `<article class="work">`, zmień okładkę (`<img>` w `<button>`), tytuł, tagi i numer.
+3. W `<template>` wstaw zawartość okna projektu: `<img src="...">` albo `<video src="....mp4" poster="....jpg" autoplay muted loop playsinline>`.
+4. Rozmiar kafelka to klasa: `s-4x2`, `s-3x2`, `s-2x2` albo `s-2x1` (siatka ma 6 kolumn, puste miejsca same się zapełniają).
+
+Zawartość `<template>` ładuje się dopiero po kliknięciu, więc dużo wideo nie spowalnia strony głównej.
 
 ## Publikacja na GitHub Pages
 
