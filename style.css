@@ -1,0 +1,110 @@
+:root {
+  --bg: #121418;
+  --surface: #1b1e24;
+  --text: #e8e6e1;
+  --muted: #9aa1ab;
+  --accent: #e8913a;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, img:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.top {
+  position: sticky; top: 0; z-index: 1;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px clamp(16px, 5vw, 64px);
+  background: rgb(18 20 24 / .85);
+  backdrop-filter: blur(8px);
+}
+.logo { font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: .05em; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 20px; }
+nav a:hover { color: var(--text); }
+
+main > section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px clamp(16px, 5vw, 64px);
+  scroll-margin-top: 40px;
+}
+h1 { font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1; margin: .2em 0; }
+h2 { font-size: 1.8rem; margin: 0 0 28px; }
+h2::before { content: ""; display: block; width: 40px; height: 3px; background: var(--accent); margin-bottom: 12px; }
+h3 { margin-top: 40px; }
+
+.hero { padding-top: 120px; padding-bottom: 100px; }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .15em; font-size: .85rem; margin: 0; }
+.lead { color: var(--muted); font-size: 1.2rem; max-width: 36em; }
+.btn {
+  display: inline-block; margin-top: 16px; padding: 12px 24px;
+  background: var(--accent); color: #121418; font-weight: 700;
+  text-decoration: none; border-radius: var(--radius);
+}
+.btn:hover { filter: brightness(1.1); }
+
+.about { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+.about p { margin-top: 0; color: var(--muted); }
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; align-content: start; }
+.tags li { background: var(--surface); padding: 4px 12px; border-radius: 999px; font-size: .9rem; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.gallery figure { margin: 0; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.gallery img {
+  display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+  cursor: zoom-in; transition: transform .3s;
+}
+.gallery figure:hover img { transform: scale(1.03); }
+.gallery figcaption { padding: 12px 16px; font-size: .95rem; color: var(--muted); }
+
+.links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.links a {
+  display: block; padding: 10px 20px; background: var(--surface);
+  border-radius: var(--radius); text-decoration: none; color: var(--text);
+}
+.links a:hover { color: var(--accent); }
+.repos { padding-left: 20px; color: var(--muted); }
+.repos li { margin-bottom: 8px; }
+.repos a { margin-right: 6px; }
+
+footer { text-align: center; padding: 40px; color: var(--muted); font-size: .9rem; }
+
+dialog { padding: 0; border: 0; background: none; max-width: 95vw; max-height: 95vh; }
+dialog::backdrop { background: rgb(0 0 0 / .85); }
+dialog img { display: block; max-width: 95vw; max-height: 90vh; border-radius: var(--radius); }
+dialog button {
+  position: fixed; top: 16px; right: 20px;
+  background: none; border: 0; color: #fff; font-size: 2.5rem; cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .about { grid-template-columns: 1fr; }
+  nav a { margin-left: 14px; }
+  .gallery { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gallery img { transition: none; }
+}
+
+#galeria h3 { margin: 48px 0 8px; font-size: 1.3rem; }
+#galeria h3:first-of-type { margin-top: 0; }
+#galeria h3 a { font-size: .85rem; font-weight: 400; margin-left: 10px; }
+.note { color: var(--muted); margin: 0 0 20px; max-width: 48em; }
+
+.timeline { list-style: none; padding: 0; margin: 24px 0 0; }
+.timeline li { padding: 8px 0 8px 16px; border-left: 2px solid var(--surface); color: var(--muted); }
+.timeline b { color: var(--text); margin-right: 6px; }
+.timeline span { display: block; font-size: .85rem; }
