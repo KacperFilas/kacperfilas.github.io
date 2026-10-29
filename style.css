@@ -76,7 +76,7 @@ h1 span { color: var(--accent); }
 .btn.ghost { background: transparent; color: var(--text); border-color: rgb(255 255 255 / .25); }
 .btn.ghost:hover { border-color: var(--text); }
 .hero-foot { display: grid; gap: 12px; max-width: 900px; }
-.stats { margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.stats { margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .stats div { padding: 18px 20px; border: 1px solid var(--line); background: rgb(21 19 17 / .7); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .stats dt { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -.03em; line-height: 1; }
 .stats dd { margin: 8px 0 0; font: 500 .72rem var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
@@ -186,7 +186,6 @@ dialog::backdrop { background: rgb(5 4 3 / .82); -webkit-backdrop-filter: blur(6
 @media (max-width: 960px) {
   .works, .works.games { grid-template-columns: repeat(2, 1fr); }
   .work.wide { grid-column: 1 / -1; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
   .head.split { grid-template-columns: 1fr; gap: 16px; }
   .services li { grid-template-columns: 80px 1fr; }
   .services p { grid-column: 2; }
