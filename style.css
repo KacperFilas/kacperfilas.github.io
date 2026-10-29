@@ -172,7 +172,7 @@ dialog::backdrop { background: rgb(5 4 3 / .82); -webkit-backdrop-filter: blur(6
 .project-body video { aspect-ratio: 16 / 9; object-fit: cover; }
 .project-body h3 { margin: 12px 0 0; font: 500 .75rem var(--mono); color: var(--accent); letter-spacing: .1em; text-transform: uppercase; }
 .tiles { display: grid; gap: 12px; }
-.tiles.portrait { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.tiles.portrait { grid-template-columns: repeat(3, 1fr); }  /* 9 dioram = 3 równe rzędy */
 .tiles img { min-height: 80px; cursor: zoom-in; }  /* lazy images need a box to start loading */
 #zoom { padding: 0; margin: auto; border: 0; background: transparent; max-width: 100vw; max-height: 100vh; cursor: zoom-out; }
 #zoom::backdrop { background: rgb(5 4 3 / .92); }
@@ -202,7 +202,6 @@ dialog::backdrop { background: rgb(5 4 3 / .82); -webkit-backdrop-filter: blur(6
   dialog { padding: 0; }
   .project-panel { min-height: 100%; border: 0; }
   .project-body { padding: 16px; }
-  .tiles.portrait { grid-template-columns: repeat(2, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
