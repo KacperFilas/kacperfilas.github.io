@@ -15,6 +15,7 @@
     <a class="logo" href="#"><b>KF</b><span>Kacper Filas</span></a>
     <nav>
       <a href="#prace">Prace</a>
+      <a href="#gry">Gry</a>
       <a href="#uslugi">Czym się zajmuję</a>
       <a href="#doswiadczenie">Doświadczenie</a>
       <a class="nav-cta" href="#kontakt">Kontakt →</a>
@@ -23,7 +24,7 @@
 
   <main>
     <section class="hero">
-      <video class="hero-bg" src="gallery/cathedral/mainshot.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+      <video class="hero-bg" src="gallery/cathedral/hero-loop.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
       <div class="hero-inner">
         <p class="status"><span class="dot"></span>Level &amp; Technical Artist · Ten Square Games</p>
         <p class="label">// Wrocław, Polska</p>
@@ -44,14 +45,10 @@
     </section>
 
     <section id="prace" class="section">
-      <div class="head">
-        <p class="label">// Portfolio</p>
-        <h2>Wybrane prace</h2>
-      </div>
-      <div class="filters" role="group" aria-label="Filtruj prace"><button class="filter" data-filter="all" aria-pressed="true">Wszystko</button><button class="filter" data-filter="tools" aria-pressed="false">Narzędzia</button><button class="filter" data-filter="th" aria-pressed="false">Trophy Hunter</button><button class="filter" data-filter="personal" aria-pressed="false">Osobiste</button><button class="filter" data-filter="3d" aria-pressed="false">Modele 3D</button><button class="filter" data-filter="games" aria-pressed="false">Wydane gry</button></div>
+      <p class="label">// Portfolio</p>
       <!--
-        Jak dodać projekt: skopiuj cały <article class="work" data-cat="...">.
-        - data-cat = filtr: tools / th / personal / 3d / games
+        Jak dodać projekt: skopiuj cały <article class="work">.
+        - klasa wide = karta na dwie kolumny, <h3 class="group-label"> = nagłówek grupy
         - <img> w <button> to okładka karty, <span class="idx"> to nazwa kategorii
         - <template> to zawartość okna projektu: <img> dla screenów i GIF-ów,
           <video src="..." poster="..." autoplay muted loop playsinline> dla klipów MP4
@@ -59,7 +56,8 @@
         Pliki trzymaj w gallery/nazwa-projektu/.
       -->
       <div class="works">
-        <article class="work" data-cat="tools">
+        <h3 class="group-label">Narzędzia i pipeline</h3>
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/scatter-tool/viewport.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Tree Scatter Tool — Blender → Unity</span><span class="work-tags">Geometry Nodes · Python · Unity</span></span>
@@ -76,7 +74,7 @@
             <img src="gallery/scatter-tool/nodes-scale-rotation.jpg" alt="Sekcje skali per asset i rotacji">
           </template>
         </article>
-        <article class="work" data-cat="tools">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/splat-tool/demo.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Splat Map Painter</span><span class="work-tags">Unity · C# · Editor tooling</span></span>
@@ -87,7 +85,7 @@
             <video src="gallery/splat-tool/demo.mp4" poster="gallery/splat-tool/demo.jpg" autoplay muted loop playsinline></video>
           </template>
         </article>
-        <article class="work" data-cat="tools">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/comfyui/3d-model-generation-2.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">AI asset pipeline — ComfyUI</span><span class="work-tags">ComfyUI · Trellis 2 · Hunyuan3D</span></span>
@@ -104,7 +102,8 @@
             </div>
           </template>
         </article>
-        <article class="work" data-cat="th">
+        <h3 class="group-label">Trophy Hunter</h3>
+        <article class="work wide">
           <button class="work-cover">
             <img src="gallery/th-locations/l25.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Trophy Hunter</span><span class="work-title">Lokacje Trophy Hunter</span><span class="work-tags">Unity · level art · lighting</span></span>
@@ -128,7 +127,7 @@
             </div>
           </template>
         </article>
-        <article class="work" data-cat="th">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/th-menu/l10.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Trophy Hunter</span><span class="work-title">Menu aren</span><span class="work-tags">Unity · kompozycja · VFX</span></span>
@@ -189,7 +188,8 @@
             </div>
           </template>
         </article>
-        <article class="work" data-cat="personal">
+        <h3 class="group-label">Projekty osobiste</h3>
+        <article class="work wide">
           <button class="work-cover">
             <img src="gallery/cathedral/mainshot.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Cathedral in a cave</span><span class="work-tags">Unreal Engine · ZBrush · Substance</span></span>
@@ -215,7 +215,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/x3yvqm">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="personal">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/niagara-vfx/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Niagara VFX</span><span class="work-tags">Unreal Engine · Niagara</span></span>
@@ -233,7 +233,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/XJ0VBa">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="personal">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/desert/render1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Desert Environment</span><span class="work-tags">Unreal Engine · Substance Designer</span></span>
@@ -249,7 +249,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/L4B8Jk">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="personal">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/chaos-vehicle/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Chaos Vehicle</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
@@ -262,7 +262,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/8Bg1Ox">Pełne wideo na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="personal">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/platformer/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
@@ -280,7 +280,8 @@
             <a class="as-link" href="https://www.artstation.com/artwork/98VAPa">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="3d">
+        <h3 class="group-label">Modele 3D</h3>
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/fm2-series/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Modele 3D</span><span class="work-title">Front Mission 2 Remake — Tank Series</span><span class="work-tags">Blender · Substance · Unity</span></span>
@@ -298,7 +299,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/o250JL">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="3d">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/fm2-tank/render1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Modele 3D</span><span class="work-title">Front Mission 2 Remake — Tank</span><span class="work-tags">Blender · Substance · Unity</span></span>
@@ -314,7 +315,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/03wanY">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="3d">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/heater/back.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Modele 3D</span><span class="work-title">Heater Prop</span><span class="work-tags">Blender · Substance · Unity</span></span>
@@ -328,7 +329,20 @@
             <a class="as-link" href="https://www.artstation.com/artwork/QXKDKl">Zobacz na ArtStation ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+      </div>
+      <a class="more" href="https://www.artstation.com/kacperfilas">Więcej na ArtStation ↗</a>
+    </section>
+
+    <section id="gry" class="section">
+      <div class="head split">
+        <div>
+          <p class="label">// Wydane gry</p>
+          <h2>Gry, przy których pracowałem</h2>
+        </div>
+        <p class="intro">Produkcje mobilne, PC i konsolowe, przy których pracowałem w Ten Square Games i Forever Entertainment. Kliknij, żeby zobaczyć screeny i moją rolę.</p>
+      </div>
+      <div class="works games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/th-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Trophy Hunter</span><span class="work-tags">Ten Square Games</span></span>
@@ -344,7 +358,7 @@
             <a class="as-link" href="https://apps.apple.com/us/app/trophy-hunter-sniper-game/id6746784052">Zobacz w App Store ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fc-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Fishing Clash</span><span class="work-tags">Ten Square Games</span></span>
@@ -359,7 +373,7 @@
             <a class="as-link" href="https://apps.apple.com/us/app/fishing-clash-sport-simulator/id1151811380">Zobacz w App Store ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/mh-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Medal Hunter</span><span class="work-tags">Ten Square Games</span></span>
@@ -374,7 +388,7 @@
             <a class="as-link" href="https://apps.apple.com/us/app/medal-hunter-military-game/id6762197056">Zobacz w App Store ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/hc-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Heavy Cargo</span><span class="work-tags">PC</span></span>
@@ -389,7 +403,7 @@
             <a class="as-link" href="https://store.steampowered.com/app/1474930/">Zobacz w Steam ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/dkcr-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Donkey Kong Country Returns HD</span><span class="work-tags">Forever Entertainment</span></span>
@@ -405,7 +419,7 @@
             <a class="as-link" href="https://www.nintendo.com/us/store/products/donkey-kong-country-returns-hd-switch/">Zobacz w Nintendo ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fm1-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Front Mission 1st: Remake</span><span class="work-tags">Forever Entertainment</span></span>
@@ -421,7 +435,7 @@
             <a class="as-link" href="https://store.steampowered.com/app/2399730/">Zobacz w Steam ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fm2-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Front Mission 2: Remake</span><span class="work-tags">Forever Entertainment</span></span>
@@ -437,7 +451,7 @@
             <a class="as-link" href="https://store.steampowered.com/app/2865440/">Zobacz w Steam ↗</a>
           </template>
         </article>
-        <article class="work" data-cat="games">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fm3-1.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Front Mission 3: Remake</span><span class="work-tags">Forever Entertainment</span></span>
@@ -454,7 +468,6 @@
           </template>
         </article>
       </div>
-      <a class="more" href="https://www.artstation.com/kacperfilas">Więcej na ArtStation ↗</a>
     </section>
 
     <section id="uslugi" class="section">
@@ -523,12 +536,6 @@
     const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (calm) document.querySelector('.hero-bg').pause();
 
-    // Filtry: chowają karty spoza wybranej kategorii.
-    const filters = document.querySelectorAll('.filter');
-    filters.forEach(f => f.addEventListener('click', () => {
-      filters.forEach(x => x.setAttribute('aria-pressed', x === f));
-      document.querySelectorAll('.work').forEach(w => w.hidden = f.dataset.filter !== 'all' && w.dataset.cat !== f.dataset.filter);
-    }));
 
     // Klik w kartę: zawartość <template> trafia do okna, więc wideo ładuje się dopiero po otwarciu.
     const dlg = document.getElementById('project');
