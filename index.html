@@ -72,6 +72,32 @@
       -->
       <div class="works">
         <h3 class="group-label">Narzędzia i pipeline</h3>
+        <article class="work wide">
+          <button class="work-cover">
+            <img src="gallery/kf-tools/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Unity Editor Toolkit — asset pipeline</span><span class="work-tags">Unity · C# · Editor tooling · automatyzacja</span></span>
+          </button>
+          <template>
+            <p>Zestaw narzędzi edytorowych, które napisałem dla zespołu level artu w mobilnej grze: jedno okno z zakładkami Scene, Assets i Generators. Cel: assety od artystów mają trafiać do gry same, według konwencji, bez ręcznego klikania w ustawienia.</p>
+            <h3>Weapon Generator</h3>
+            <p>Artysta wrzuca folder z modelem i teksturami. Narzędzie rozpoznaje pliki po nazwach (stare i nowe konwencje), ostrzega o brakach (model, base color, normal, ORM, ikona), zmienia nazwy na standard <code>{prefix}_base_color / _normal / _orm / _icon</code> bez psucia referencji, ustawia import tekstur według roli (sRGB/linear, normal map, sprite, max size, kompresja), tworzy materiał z szablonu i buduje dwa prefaby z szablonów. Tryb wsadowy obrabia wszystkie rzadkości broni naraz.</p>
+            <video src="gallery/kf-tools/weapon-generator.mp4" poster="gallery/kf-tools/weapon-generator.jpg" autoplay muted loop playsinline></video>
+            <h3>Path Sim</h3>
+            <p>Puszcza zwierzęta po ścieżkach lokacji z prawdziwą logiką gry prosto w edytorze, bez odpalania całej gry. Level artysta od razu widzi, czy ścieżki przechodzą przez teren i obiekty, a narzędzie zgłasza miejsca, w których zwierzęta wchodzą na siebie.</p>
+            <video src="gallery/kf-tools/path-sim.mp4" poster="gallery/kf-tools/path-sim.jpg" autoplay muted loop playsinline></video>
+            <h3>Model Generator</h3>
+            <p>Z folderu lokacji i prefabów zwierząt generuje pliki danych trybu gry w repo z modelem gry: rundy, pule ścieżek, broń i części broni. Przed generowaniem sprawdza, co dostał: grupy ścieżek, AssetBundle sceny, wariant dzienny lub nocny, a dla każdej rzadkości broni i każdego zwierzęcia AssetBundle i ikonę. Statystyki nowej broni kopiuje z najbliższej wcześniejszej areny jako punkt startowy, a istniejących plików nie nadpisuje bez wyraźnej zgody, więc zmiany designerów zostają.</p>
+            <video src="gallery/kf-tools/model-generator.mp4" poster="gallery/kf-tools/model-generator.jpg" autoplay muted loop playsinline></video>
+            <h3>Pozostałe narzędzia</h3>
+            <ul>
+              <li><b>AB Paths</b> — rozpoznaje układ folderu lokacji i przypisuje AssetBundle każdemu podfolderowi jednym kliknięciem.</li>
+              <li><b>Deep Copy</b> — kopiuje folder (np. wariant nocny lokacji) i przepina referencje GUID na nowe kopie.</li>
+              <li><b>Missing Bindings</b> — znajduje i usuwa martwe ścieżki animacji w prefabach.</li>
+              <li><b>Tree Scatter i Splat Painter</b> — opisane w osobnych kartach; import scattera to <code>AssetPostprocessor</code>, który odpala się sam po eksporcie z Blendera.</li>
+            </ul>
+            <p class="soft">Unity Editor tooling · C# · AssetPostprocessor · TextureImporter · PrefabUtility</p>
+          </template>
+        </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/scatter-tool/viewport.jpg" alt="" loading="lazy">
@@ -100,7 +126,7 @@
             <video src="gallery/splat-tool/demo.mp4" poster="gallery/splat-tool/demo.jpg" autoplay muted loop playsinline></video>
           </template>
         </article>
-        <article class="work">
+        <article class="work wide">
           <button class="work-cover">
             <img src="gallery/comfyui/3d-model-generation-2.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">AI asset pipeline — ComfyUI</span><span class="work-tags">ComfyUI · Trellis 2 · Hunyuan3D</span></span>
@@ -496,7 +522,7 @@
         <p class="intro">Pracuję na styku artystów i programistów: buduję pipeline, rozwiązuję problemy z renderingiem i dowożę grafikę, która mieści się w budżecie wydajności.</p>
       </div>
       <ol class="services">
-        <li><span>01</span><h3>Narzędzia i automatyzacja</h3><p>Narzędzia edytorowe w Unity i Blenderze, skrypty w C# i Pythonie, pipeline'y z AI w ComfyUI.</p></li>
+        <li><span>01</span><h3>Narzędzia i automatyzacja</h3><p>Narzędzia edytorowe w Unity i Blenderze, skrypty w C# i Pythonie: walidacja assetów, konwencje nazw, automatyczny import, materiały i prefaby z szablonów. Pipeline'y z AI w ComfyUI.</p></li>
         <li><span>02</span><h3>Shadery i optymalizacja</h3><p>Shadery w HLSL i Shader Graph, materiały i assety pod budżety mobilne, profilowanie scen.</p></li>
         <li><span>03</span><h3>Level i environment art</h3><p>Sceny od blockoutu do finalnego światła, tereny z danych GIS i Gaea, level design.</p></li>
         <li><span>04</span><h3>VFX i animacja</h3><p>Efekty w Particle System, VFX Graph i Niagarze, animacje w Animatorze i Timeline.</p></li>
@@ -509,7 +535,7 @@
         <h2>Gdzie pracowałem</h2>
       </div>
       <ol class="jobs">
-        <li><span class="when">2025 — teraz</span><div><h3>Ten Square Games</h3><p class="what">Level &amp; Technical Artist</p><p>Narzędzia edytorowe, automatyzacja i workflowy PBR, shadery i optymalizacja pod mobile, level art, VFX i animacje w Unity. Trophy Hunter.</p></div></li>
+        <li><span class="when">2025 — teraz</span><div><h3>Ten Square Games</h3><p class="what">Level &amp; Technical Artist</p><p>Narzędzia edytorowe automatyzujące pipeline assetów w Unity: walidacja kompletności dostaw, konwencja nazw, presety importu tekstur, materiały i prefaby z szablonów, przypisywanie AssetBundli, generowanie danych trybów gry. Do tego shadery i optymalizacja pod mobile, level art, VFX i animacje. Trophy Hunter.</p></div></li>
         <li><span class="when">2024 — 2025</span><div><h3>YSLAB</h3><p class="what">Level &amp; Environment Artist</p><p>Interaktywne środowiska w Unity i UE5 z danych przestrzennych (GIS, LiDAR, Gaea, Cesium), pipeline produkcji wspierany AI.</p></div></li>
         <li><span class="when">2023 — 2024</span><div><h3>Ten Square Games</h3><p class="what">3D Artist</p><p>Modele, tekstury i implementacja assetów w Unity, narzędzia w Unity i Blenderze, stylizowane VFX.</p></div></li>
         <li><span class="when">2022 — 2023</span><div><h3>Forever Entertainment</h3><p class="what">Level &amp; VFX Artist</p><p>Levele i VFX do Donkey Kong Country Returns HD, środowiska i propsy do remake'ów Front Mission 1–3.</p></div></li>
