@@ -174,7 +174,8 @@ dialog::backdrop { background: rgb(5 4 3 / .82); -webkit-backdrop-filter: blur(6
 .project-body h3 { margin: 12px 0 0; font: 500 .75rem var(--mono); color: var(--accent); letter-spacing: .1em; text-transform: uppercase; }
 .tiles { display: grid; gap: 12px; }
 .tiles.portrait { grid-template-columns: repeat(3, 1fr); }  /* 9 dioram = 3 równe rzędy */
-.tiles img { min-height: 80px; cursor: zoom-in; }  /* lazy images need a box to start loading */
+.project-body img { cursor: zoom-in; }
+.tiles img { min-height: 80px; }  /* lazy images need a box to start loading */
 #zoom { padding: 0; margin: auto; border: 0; background: transparent; max-width: 100vw; max-height: 100vh; cursor: zoom-out; }
 #zoom::backdrop { background: rgb(5 4 3 / .92); }
 #zoom img { max-width: 94vw; max-height: 94vh; width: auto; height: auto; }

@@ -251,9 +251,6 @@
             <video src="gallery/switch/vfx-temple-dust.mp4" poster="gallery/switch/vfx-temple-dust.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/switch/vfx-hut-smoke.mp4" poster="gallery/switch/vfx-hut-smoke.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/switch/vfx-hit-sparks.mp4" poster="gallery/switch/vfx-hit-sparks.jpg" autoplay muted loop playsinline></video>
-            <ul class="vids">
-              <li><a href="https://www.youtube.com/watch?v=aHYL0-4XrUk">Trailer</a></li>
-            </ul>
           </template>
         </article>
         <h3 class="group-label">Personal projects</h3>
@@ -629,7 +626,7 @@
     // Klik w obrazek z galerii otwiera go na cały ekran; klik albo Esc zamyka.
     const zoom = document.getElementById('zoom');
     body.addEventListener('click', e => {
-      if (!e.target.matches('.tiles img')) return;
+      if (!e.target.matches('.project-body img')) return;
       zoom.firstChild.src = e.target.src;
       zoom.firstChild.alt = e.target.alt;
       zoom.showModal();
