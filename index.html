@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kacper Filas — Technical Artist</title>
-  <meta name="description" content="Kacper Filas: Level &amp; Technical Artist. Narzędzia, shadery, VFX, optymalizacja mobile, level i environment art w Unity i Unreal Engine 5.">
+  <meta name="description" content="Kacper Filas: Technical Artist. Tools, shaders, VFX, optimization, level and environment art in Unity and Unreal Engine 5.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,11 +14,11 @@
   <header class="top">
     <a class="logo" href="#"><b>KF</b><span>Kacper Filas</span></a>
     <nav>
-      <a href="#prace">Prace</a>
-      <a href="#gry">Gry</a>
-      <a href="#uslugi">Czym się zajmuję</a>
-      <a href="#doswiadczenie">Doświadczenie</a>
-      <a class="nav-cta" href="#kontakt">Kontakt →</a>
+      <a href="#work">Work</a>
+      <a href="#games">Games</a>
+      <a href="#services">What I do</a>
+      <a href="#experience">Experience</a>
+      <a class="nav-cta" href="#contact">Contact →</a>
     </nav>
   </header>
 
@@ -26,21 +26,21 @@
     <section class="hero">
       <video class="hero-bg" src="gallery/cathedral/hero-loop.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
       <div class="hero-inner">
-        <p class="status"><span class="dot"></span>Level &amp; Technical Artist · Ten Square Games</p>
-        <p class="label">// Wrocław, Polska</p>
+        <p class="status"><span class="dot"></span>Technical Artist · Ten Square Games</p>
+        <p class="label">// Wrocław, Poland</p>
         <h1>Kacper<br><span>Filas</span></h1>
         <p class="role">Technical Artist · Unity · Unreal Engine 5</p>
-        <p class="lead">Piszę narzędzia i shadery, które przyspieszają pracę artystów, robię level art i VFX, a przy tym dbam o optymalizację, żeby gra wyglądała dobrze i działała płynnie na docelowej platformie.</p>
+        <p class="lead">I build tools and shaders that speed up artists’ work, create level art and VFX, and keep optimization in check so the game looks good and runs smoothly on its target platform.</p>
         <div class="cta">
-          <a class="btn" href="#prace">Zobacz prace</a>
-          <a class="btn ghost" href="#kontakt">Kontakt</a>
+          <a class="btn" href="#work">See my work</a>
+          <a class="btn ghost" href="#contact">Contact</a>
         </div>
       </div>
       <div class="hero-foot">
       <dl class="stats">
-        <div><dt>5+</dt><dd>lat w gamedevie</dd></div>
-        <div><dt>8</dt><dd>wydanych gier</dd></div>
-        <div><dt>4</dt><dd>studia</dd></div>
+        <div><dt>5+</dt><dd>years in gamedev</dd></div>
+        <div><dt>8</dt><dd>shipped games</dd></div>
+        <div><dt>4</dt><dd>studios</dd></div>
       </dl>
       <div class="toolbar">
         <ul class="tools">
@@ -59,7 +59,7 @@
       </div>
     </section>
 
-    <section id="prace" class="section">
+    <section id="work" class="section">
       <p class="label">// Portfolio</p>
       <!--
         Jak dodać projekt: skopiuj cały <article class="work">.
@@ -71,56 +71,51 @@
         Pliki trzymaj w gallery/nazwa-projektu/.
       -->
       <div class="works">
-        <h3 class="group-label">Narzędzia i pipeline</h3>
+        <h3 class="group-label">Tools &amp; pipeline</h3>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/kf-tools/weapon-generator.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Asset → Prefab Generator</span><span class="work-tags">Unity · C# · import pipeline</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Asset → Prefab Generator</span><span class="work-tags">Unity · C# · import pipeline</span></span>
           </button>
           <template>
-            <p><b>Problem:</b> każdy nowy asset wymagał ręcznego ustawienia importu tekstur, materiału i prefabów. Przy dziesiątkach assetów to godziny pracy i łatwo o pomyłkę.</p>
-            <p><b>Rozwiązanie:</b> wrzucasz folder z modelem i teksturami, a narzędzie rozpoznaje pliki, zgłasza braki, nadaje nazwy według konwencji bez psucia referencji, ustawia import każdej tekstury według jej roli (kolor, normal mapa, maski, ikona), tworzy materiał i gotowe prefaby z szablonów. Działa też wsadowo na wiele assetów naraz.</p>
+            <p><b>Problem:</b> every new asset needed texture import settings, a material and prefabs set up by hand. With dozens of assets that is hours of work and easy to get wrong.</p>
+            <p><b>Solution:</b> drop in a folder with a model and textures, and the tool identifies the files, reports anything missing, renames everything to the naming convention without breaking references, sets import settings for each texture by its role (color, normal map, masks, icon), and builds the material and ready-to-use prefabs from templates. It also runs in batch over many assets at once.</p>
+            <p class="soft">Unity Editor tooling · C#</p>
             <video src="gallery/kf-tools/weapon-generator.mp4" poster="gallery/kf-tools/weapon-generator.jpg" autoplay muted loop playsinline></video>
-            <p>Część większego zestawu narzędzi edytorowych, w którym są też:</p>
-            <ul>
-              <li><b>AB Paths</b> — rozpoznaje strukturę folderu i jednym kliknięciem przypisuje AssetBundle całej zawartości, zamiast ręcznie plik po pliku.</li>
-              <li><b>Missing Bindings</b> — znajduje i usuwa w animacjach odwołania do obiektów, których nie ma już w prefabie, co często zostaje po zmianach w hierarchii.</li>
-            </ul>
-            <p class="soft">Unity Editor tooling · C# · TextureImporter · PrefabUtility</p>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/kf-tools/model-generator.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Game Data Generator</span><span class="work-tags">Unity · C# · automatyzacja danych</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Game Data Generator</span><span class="work-tags">Unity · C# · data automation</span></span>
           </button>
           <template>
-            <p><b>Problem:</b> każdy nowy poziom wymagał ręcznego pisania plików konfiguracyjnych z danymi rozgrywki i przypisaniami assetów. To żmudne i podatne na literówki.</p>
-            <p><b>Rozwiązanie:</b> narzędzie zbiera informacje z assetów poziomu, sprawdza ich kompletność (paczki, ikony, warianty) i generuje gotowe pliki danych. Wartości startowe bierze z poprzedniego poziomu, a ręcznych poprawek designerów nie nadpisuje bez pytania.</p>
-            <video src="gallery/kf-tools/model-generator.mp4" poster="gallery/kf-tools/model-generator.jpg" autoplay muted loop playsinline></video>
+            <p><b>Problem:</b> every new level needed config files with gameplay data and asset assignments written by hand. Tedious and prone to typos.</p>
+            <p><b>Solution:</b> the tool collects information from the level’s assets, validates that they are complete (bundles, icons, variants) and generates ready data files. It takes starting values from the previous level and never overwrites designers’ manual tweaks without asking.</p>
             <p class="soft">Unity Editor tooling · C# · JSON</p>
+            <video src="gallery/kf-tools/model-generator.mp4" poster="gallery/kf-tools/model-generator.jpg" autoplay muted loop playsinline></video>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/kf-tools/deep-copy.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Deep Copy</span><span class="work-tags">Unity · C# · referencje assetów</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Deep Copy</span><span class="work-tags">Unity · C# · asset references</span></span>
           </button>
           <template>
-            <p><b>Problem:</b> zwykłe duplikowanie folderu w Unity robi kopię, której sceny, prefaby i materiały dalej odwołują się do oryginalnych plików. Zmiana w kopii psuje oryginał, a ręczne przepinanie referencji w całym poziomie to godziny pracy.</p>
-            <p><b>Rozwiązanie:</b> jedno kliknięcie kopiuje cały folder z dopiskiem w nazwach i przepina wszystkie referencje na nowe pliki. Scena kopii używa skopiowanych prefabów, a prefaby skopiowanych meshy i materiałów. Przydaje się przy wariantach poziomów i assetów.</p>
+            <p><b>Problem:</b> duplicating a folder in Unity creates a copy whose scenes, prefabs and materials still reference the original files. Editing the copy breaks the original, and relinking references across a whole level by hand takes hours.</p>
+            <p><b>Solution:</b> one click copies the whole folder with a suffix added to the names and remaps every reference to the new files. The copied scene uses the copied prefabs, and the prefabs use the copied meshes and materials. Handy for level and asset variants.</p>
+            <p class="soft">Unity Editor tooling · C#</p>
             <video src="gallery/kf-tools/deep-copy.mp4" poster="gallery/kf-tools/deep-copy.jpg" autoplay muted loop playsinline></video>
-            <p class="soft">Unity Editor tooling · C# · AssetDatabase · GUID remap</p>
           </template>
         </article>
         <article class="work wide">
           <button class="work-cover">
             <img src="gallery/comfyui/3d-model-generation-2.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">AI asset pipeline — ComfyUI</span><span class="work-tags">ComfyUI · Trellis 2 · Hunyuan3D</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">AI asset pipeline — ComfyUI</span><span class="work-tags">ComfyUI · Trellis 2 · Hunyuan3D</span></span>
           </button>
           <template>
-            <p>Workflowy w ComfyUI do szybkiego prototypowania assetów: generowanie modelu 3D z jednego obrazka (usuwanie tła, Trellis 2 / Hunyuan3D, eksport GLB z teksturą PBR), generowanie tekstur i skinów broni. Ustawienia zebrane w jednej grupie, żeby artysta zmieniał tylko kilka parametrów.</p>
-            <p class="soft">ComfyUI · Trellis 2 · Hunyuan3D · BiRefNet</p>
+            <p>ComfyUI workflows for fast asset prototyping: 3D model generation from a single image (background removal, Trellis 2 / Hunyuan3D, GLB export with PBR textures), plus texture and weapon skin generation. Settings are grouped in one place so an artist only changes a few parameters.</p>
+            <p class="soft">ComfyUI · Trellis 2 · Hunyuan3D</p>
             <div class="tiles wide">
               <img loading="lazy" src="gallery/comfyui/3d-model-generation-1.jpg" alt="Workflow ComfyUI: 3d model generation 1">
               <img loading="lazy" src="gallery/comfyui/3d-model-generation-2.jpg" alt="Workflow ComfyUI: 3d model generation 2">
@@ -133,41 +128,41 @@
         <article class="work">
           <button class="work-cover">
             <img src="gallery/scatter-tool/viewport.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Tree Scatter Tool — Blender → Unity</span><span class="work-tags">Geometry Nodes · Python · Unity</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Tree Scatter Tool — Blender → Unity</span><span class="work-tags">Geometry Nodes · Python · Unity</span></span>
           </button>
           <template>
-            <p>Narzędzie do rozsypywania drzew i roślinności po terenie w Blenderze, z eksportem do Unity. Geometry Nodes rozkłada punkty z kontrolą gęstości (atrybut malowany na terenie), maksymalnego nachylenia i minimalnego odstępu, losuje asset z kolekcji i ustawia skalę oraz offset Z osobno dla każdego assetu. Rotacja jest losowa albo skierowana w stronę wskazanego obiektu.</p>
-            <p>Add-on w Pythonie (panel „Scatter To Unity”) trzyma tabelę skal i offsetów per asset i jednym przyciskiem eksportuje pozycje, kierunek i skalę każdej instancji do JSON-a, który czyta importer w edytorze Unity.</p>
-            <p class="soft">Blender Geometry Nodes · Python (bpy) · Unity Editor tooling</p>
+            <p>A tool for scattering trees and vegetation over terrain in Blender, with export to Unity. Geometry Nodes distributes points with control over density (an attribute painted on the terrain), maximum slope and minimum spacing, picks a random asset from a collection and applies per-asset scale and Z offset. Rotation is random or aimed at a chosen object.</p>
+            <p>A Python add-on (the “Scatter To Unity” panel) stores a per-asset scale and offset table and, with one button, exports the position, direction and scale of every instance to JSON, which an importer in the Unity editor reads.</p>
+            <p class="soft">Blender Geometry Nodes · Python · Unity Editor tooling</p>
             <video src="gallery/scatter-tool/demo.mp4" poster="gallery/scatter-tool/demo.jpg" autoplay muted loop playsinline></video>
-            <img src="gallery/scatter-tool/viewport.jpg" alt="Drzewa i krzewy rozsypane po terenie w Blenderze">
-            <img src="gallery/scatter-tool/viewport-panel.jpg" alt="Panel add-onu Scatter To Unity z tabelą skal per asset">
-            <img src="gallery/scatter-tool/nodes-overview.jpg" alt="Całe drzewo Geometry Nodes podzielone na sekcje">
-            <img src="gallery/scatter-tool/nodes-asset-surface.jpg" alt="Sekcje wyboru assetu i rozkładu punktów na powierzchni">
-            <img src="gallery/scatter-tool/nodes-scale-rotation.jpg" alt="Sekcje skali per asset i rotacji">
+            <img src="gallery/scatter-tool/viewport.jpg" alt="Trees and bushes scattered over terrain in Blender">
+            <img src="gallery/scatter-tool/viewport-panel.jpg" alt="Scatter To Unity add-on panel with the per-asset scale table">
+            <img src="gallery/scatter-tool/nodes-overview.jpg" alt="The full Geometry Nodes tree split into sections">
+            <img src="gallery/scatter-tool/nodes-asset-surface.jpg" alt="Asset selection and surface point distribution sections">
+            <img src="gallery/scatter-tool/nodes-scale-rotation.jpg" alt="Per-asset scale and rotation sections">
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/splat-tool/demo.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Splat Map Painter</span><span class="work-tags">Unity · C# · Editor tooling</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Splat Map Painter</span><span class="work-tags">Unity · C# · Editor tooling</span></span>
           </button>
           <template>
-            <p>Narzędzie w edytorze Unity do malowania splat map terenu bezpośrednio w scenie: pędzel z promieniem, siłą, twardością i teksturą, cztery warstwy materiału, undo i zapis do pliku. Noise Fill generuje proceduralny rozkład warstw (skala, pokrycie, miękkość, detal, warp, seed) i nakłada go na cały teren jednym kliknięciem.</p>
-            <p class="soft">Unity Editor tooling · C# · shadery terenu</p>
+            <p>A Unity editor tool for painting terrain splat maps directly in the scene: a brush with radius, strength, hardness and texture, four material layers, undo and saving to file. Noise Fill generates a procedural layer distribution (scale, coverage, softness, detail, warp, seed) and applies it to the whole terrain in one click.</p>
+            <p class="soft">Unity Editor tooling · C# · terrain shaders</p>
             <video src="gallery/splat-tool/demo.mp4" poster="gallery/splat-tool/demo.jpg" autoplay muted loop playsinline></video>
           </template>
         </article>
         <article class="work wide">
           <button class="work-cover">
             <img src="gallery/kf-tools/path-sim.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Narzędzia</span><span class="work-title">Path Simulator</span><span class="work-tags">Unity · C# · NPC paths</span></span>
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Path Simulator</span><span class="work-tags">Unity · C# · NPC paths</span></span>
           </button>
           <template>
-            <p><b>Problem:</b> żeby sprawdzić, jak NPC poruszają się po zaprojektowanych ścieżkach, trzeba było uruchamiać grę i dochodzić do konkretnego momentu.</p>
-            <p><b>Rozwiązanie:</b> symulacja ruchu z prawdziwą logiką gry prosto w edytorze. Od razu widać, czy ścieżki nie przechodzą przez teren lub obiekty, a narzędzie samo zgłasza miejsca, w których NPC zbliżają się do siebie albo się wyprzedzają.</p>
+            <p><b>Problem:</b> to check how NPCs move along designed paths, you had to launch the game and play up to the right moment.</p>
+            <p><b>Solution:</b> movement simulation with the real game logic, right in the editor. You instantly see whether paths clip through terrain or objects, and the tool flags spots where NPCs get too close to each other or overtake one another.</p>
+            <p class="soft">Unity Editor tooling · C#</p>
             <video src="gallery/kf-tools/path-sim.mp4" poster="gallery/kf-tools/path-sim.jpg" autoplay muted loop playsinline></video>
-            <p class="soft">Unity Editor tooling · C# · Scene View overlay</p>
           </template>
         </article>
         <h3 class="group-label">Mobile level art</h3>
@@ -177,38 +172,38 @@
             <span class="work-meta"><span class="idx">Mobile level art</span><span class="work-title">Mobile Environments</span><span class="work-tags">Unity · level art · lighting</span></span>
           </button>
           <template>
-            <p>Poziomy do gry mobilnej: level art, oświetlenie, materiały i optymalizacja.</p>
+            <p>Levels for a mobile game: level art, lighting, materials and optimization.</p>
             <p class="soft">Unity · URP · Bakery · level art · mobile optimization</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/th-locations/l27.jpg" alt="Lokacja l27">
-              <img loading="lazy" src="gallery/th-locations/halloween-2.jpg" alt="Lokacja halloween-2">
-              <img loading="lazy" src="gallery/th-locations/l16.jpg" alt="Lokacja l16">
-              <img loading="lazy" src="gallery/th-locations/l17.jpg" alt="Lokacja l17">
-              <img loading="lazy" src="gallery/th-locations/l18.jpg" alt="Lokacja l18">
-              <img loading="lazy" src="gallery/th-locations/l19.jpg" alt="Lokacja l19">
-              <img loading="lazy" src="gallery/th-locations/l20.jpg" alt="Lokacja l20">
-              <img loading="lazy" src="gallery/th-locations/l21.jpg" alt="Lokacja l21">
-              <img loading="lazy" src="gallery/th-locations/l22.jpg" alt="Lokacja l22">
-              <img loading="lazy" src="gallery/th-locations/l23.jpg" alt="Lokacja l23">
-              <img loading="lazy" src="gallery/th-locations/l24.jpg" alt="Lokacja l24">
-              <img loading="lazy" src="gallery/th-locations/l25.jpg" alt="Lokacja l25">
+              <img loading="lazy" src="gallery/th-locations/l27.jpg" alt="Location l27">
+              <img loading="lazy" src="gallery/th-locations/halloween-2.jpg" alt="Location halloween-2">
+              <img loading="lazy" src="gallery/th-locations/l16.jpg" alt="Location l16">
+              <img loading="lazy" src="gallery/th-locations/l17.jpg" alt="Location l17">
+              <img loading="lazy" src="gallery/th-locations/l18.jpg" alt="Location l18">
+              <img loading="lazy" src="gallery/th-locations/l19.jpg" alt="Location l19">
+              <img loading="lazy" src="gallery/th-locations/l20.jpg" alt="Location l20">
+              <img loading="lazy" src="gallery/th-locations/l21.jpg" alt="Location l21">
+              <img loading="lazy" src="gallery/th-locations/l22.jpg" alt="Location l22">
+              <img loading="lazy" src="gallery/th-locations/l23.jpg" alt="Location l23">
+              <img loading="lazy" src="gallery/th-locations/l24.jpg" alt="Location l24">
+              <img loading="lazy" src="gallery/th-locations/l25.jpg" alt="Location l25">
             </div>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/th-menu/l02.jpg" alt="" loading="lazy" style="object-position: 50% 28%">
-            <span class="work-meta"><span class="idx">Mobile level art</span><span class="work-title">Main Menu Dioramas</span><span class="work-tags">Unity · kompozycja · VFX</span></span>
+            <span class="work-meta"><span class="idx">Mobile level art</span><span class="work-title">Main Menu Dioramas</span><span class="work-tags">Unity · composition · VFX</span></span>
           </button>
           <template>
-            <p>Environment art do ekranu głównego gry mobilnej: kompozycja, światło i VFX pod pionowy ekran.</p>
+            <p>Main menu environment art for a mobile game: composition, lighting and VFX for a portrait screen.</p>
             <div class="tiles portrait">
               <img loading="lazy" src="gallery/th-menu/l01.jpg" alt="Diorama menu L01">
               <img loading="lazy" src="gallery/th-menu/l02.jpg" alt="Diorama menu L02">
-              <img loading="lazy" src="gallery/th-menu/l04-night.jpg" alt="Diorama menu L04, noc">
+              <img loading="lazy" src="gallery/th-menu/l04-night.jpg" alt="Diorama menu L04, night">
               <img loading="lazy" src="gallery/th-menu/l07.jpg" alt="Diorama menu L07">
               <img loading="lazy" src="gallery/th-menu/l11.jpg" alt="Diorama menu L11">
-              <img loading="lazy" src="gallery/th-menu/l13-night.jpg" alt="Diorama menu L13, noc">
+              <img loading="lazy" src="gallery/th-menu/l13-night.jpg" alt="Diorama menu L13, night">
               <img loading="lazy" src="gallery/th-menu/l16.jpg" alt="Diorama menu L16">
               <img loading="lazy" src="gallery/th-menu/l21.jpg" alt="Diorama menu L21">
               <img loading="lazy" src="gallery/th-menu/halloween-2.jpg" alt="Diorama menu Halloween">
@@ -222,20 +217,20 @@
             <span class="work-meta"><span class="idx">Console level art</span><span class="work-title">Level Art &amp; Lighting — Nintendo Switch</span><span class="work-tags">Unity · level art · lighting</span></span>
           </button>
           <template>
-            <p>Level art i oświetlenie we wszystkich poziomach platformówki 2.5D na Nintendo Switch: kaniony ze skamielinami, wulkany i rzeki lawy, świątynie, niebo o zachodzie słońca. Składanie scen, materiały, światło i finalny polish każdego poziomu.</p>
+            <p>Level art and lighting across every level of a 2.5D platformer on Nintendo Switch: fossil canyons, volcanoes and lava rivers, temples, sunset skies. Scene assembly, materials, lighting and final polish of each level.</p>
             <p class="soft">Unity · level art · lighting · Nintendo Switch · Forever Entertainment</p>
                         <div class="tiles wide">
-              <img loading="lazy" src="gallery/switch/la-09.jpg" alt="Wnętrze świątyni ze skarbem">
-              <img loading="lazy" src="gallery/switch/la-06.jpg" alt="Sylwetki na tle ognistego nieba">
-              <img loading="lazy" src="gallery/switch/la-10.jpg" alt="Jaskinia ze skamielinami">
-              <img loading="lazy" src="gallery/switch/la-01.jpg" alt="Kanion ze skamielinami">
-              <img loading="lazy" src="gallery/switch/la-04.jpg" alt="Wulkan i rzeka lawy">
-              <img loading="lazy" src="gallery/switch/la-02.jpg" alt="Platformy wśród chmur o zachodzie">
-              <img loading="lazy" src="gallery/switch/la-07.jpg" alt="Brama świątyni">
-              <img loading="lazy" src="gallery/switch/la-03.jpg" alt="Skała z czaszką dinozaura">
-              <img loading="lazy" src="gallery/switch/la-05.jpg" alt="Fabryka nad lawą">
-              <img loading="lazy" src="gallery/switch/la-08.jpg" alt="Ciemna świątynia z pochodniami">
-              <img loading="lazy" src="gallery/switch/la-11.jpg" alt="Jaskinia z amonitami">
+              <img loading="lazy" src="gallery/switch/la-09.jpg" alt="Temple interior with treasure">
+              <img loading="lazy" src="gallery/switch/la-06.jpg" alt="Silhouettes against a fiery sky">
+              <img loading="lazy" src="gallery/switch/la-10.jpg" alt="Cave with fossils">
+              <img loading="lazy" src="gallery/switch/la-01.jpg" alt="Canyon with fossils">
+              <img loading="lazy" src="gallery/switch/la-04.jpg" alt="Volcano and lava river">
+              <img loading="lazy" src="gallery/switch/la-02.jpg" alt="Platforms among clouds at sunset">
+              <img loading="lazy" src="gallery/switch/la-07.jpg" alt="Temple gate">
+              <img loading="lazy" src="gallery/switch/la-03.jpg" alt="Rock with a dinosaur skull">
+              <img loading="lazy" src="gallery/switch/la-05.jpg" alt="Factory above lava">
+              <img loading="lazy" src="gallery/switch/la-08.jpg" alt="Dark temple with torches">
+              <img loading="lazy" src="gallery/switch/la-11.jpg" alt="Cave with ammonites">
             </div>
           </template>
         </article>
@@ -245,8 +240,8 @@
             <span class="work-meta"><span class="idx">Console VFX</span><span class="work-title">Stylized VFX — Nintendo Switch</span><span class="work-tags">Unity · Particle System · VFX</span></span>
           </button>
           <template>
-            <p>Stylizowane efekty cząsteczkowe do całej gry: woda i bryzgi, wodospady, liście, kurz, wybuchy, efekty zbieranych przedmiotów i pogody. Spójny styl efektów we wszystkich poziomach.</p>
-            <p class="soft">Unity · Particle System · shadery efektów · Nintendo Switch</p>
+            <p>Stylized particle effects for the whole game: water and splashes, waterfalls, leaves, dust, explosions, pickup and weather effects. A consistent effects style across all levels.</p>
+            <p class="soft">Unity · Particle System · effect shaders · Nintendo Switch</p>
             <video src="gallery/switch/vfx-ship-splash.mp4" poster="gallery/switch/vfx-ship-splash.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/switch/vfx-boss-burst.mp4" poster="gallery/switch/vfx-boss-burst.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/switch/vfx-fire-temple.mp4" poster="gallery/switch/vfx-fire-temple.jpg" autoplay muted loop playsinline></video>
@@ -258,40 +253,40 @@
             </ul>
           </template>
         </article>
-        <h3 class="group-label">Projekty osobiste</h3>
+        <h3 class="group-label">Personal projects</h3>
         <article class="work wide">
           <button class="work-cover">
             <img src="gallery/cathedral/mainshot.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Cathedral in a cave</span><span class="work-tags">Unreal Engine · ZBrush · Substance</span></span>
+            <span class="work-meta"><span class="idx">Personal</span><span class="work-title">Cathedral in a cave</span><span class="work-tags">Unreal Engine · ZBrush · Substance</span></span>
           </button>
           <template>
-            <p>Projekt osobisty: realistyczne, klimatyczne środowisko budowane z myślą o wydajności w czasie rzeczywistym. Proceduralny grunge i uszkodzenia, tekstury world space i triplanar, vertex painting, wodospad.</p>
+            <p>Personal project: a realistic, atmospheric environment built with real-time performance in mind. Procedural grunge and damage, world-space and triplanar texturing, vertex painting, a waterfall.</p>
             <p class="soft">Blender · Unreal Engine · ZBrush · Substance 3D Painter · Substance 3D Designer · Marmoset Toolbag · Photoshop</p>
             <video src="gallery/cathedral/mainshot.mp4" poster="gallery/cathedral/mainshot.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/cathedral/lakeshot.mp4" poster="gallery/cathedral/lakeshot.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/cathedral/anim1.mp4" poster="gallery/cathedral/anim1.jpg" autoplay muted loop playsinline></video>
-            <img src="gallery/cathedral/closeup.jpg" alt="Katedra w jaskini, zbliżenie">
-            <img src="gallery/cathedral/shot-1.jpg" alt="Katedra w jaskini, panorama">
-            <img src="gallery/cathedral/shot-2.jpg" alt="Katedra w jaskini, ujęcie szerokie">
-            <img src="gallery/cathedral/shot-3.jpg" alt="Katedra w jaskini, detal">
+            <img src="gallery/cathedral/closeup.jpg" alt="Cathedral in a cave, close-up">
+            <img src="gallery/cathedral/shot-1.jpg" alt="Cathedral in a cave, panorama">
+            <img src="gallery/cathedral/shot-2.jpg" alt="Cathedral in a cave, wide shot">
+            <img src="gallery/cathedral/shot-3.jpg" alt="Cathedral in a cave, detail">
             <ul class="vids">
               <li><a href="https://www.youtube.com/watch?v=YoXil7sKsio">Gameplay</a></li>
               <li><a href="https://www.youtube.com/watch?v=dhLYeP25dvk">Viewport</a></li>
-              <li><a href="https://www.youtube.com/watch?v=NhX2kwIJgeY">Proceduralny grunge i triplanar</a></li>
+              <li><a href="https://www.youtube.com/watch?v=NhX2kwIJgeY">Procedural grunge and triplanar</a></li>
               <li><a href="https://www.youtube.com/watch?v=qAY9vTjBjUo">Vertex painting</a></li>
-              <li><a href="https://www.youtube.com/watch?v=xJ8OgxUErLU">Materiały</a></li>
-              <li><a href="https://www.youtube.com/watch?v=KKnw8mZ08uI">Wodospad</a></li>
+              <li><a href="https://www.youtube.com/watch?v=xJ8OgxUErLU">Materials</a></li>
+              <li><a href="https://www.youtube.com/watch?v=KKnw8mZ08uI">Waterfall</a></li>
             </ul>
-            <a class="as-link" href="https://www.artstation.com/artwork/x3yvqm">Zobacz na ArtStation ↗</a>
+            <a class="as-link" href="https://www.artstation.com/artwork/x3yvqm">View on ArtStation ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/niagara-vfx/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Niagara VFX</span><span class="work-tags">Unreal Engine · Niagara</span></span>
+            <span class="work-meta"><span class="idx">Personal</span><span class="work-title">Niagara VFX</span><span class="work-tags">Unreal Engine · Niagara</span></span>
           </button>
           <template>
-            <p>Efekty zrobione w Unreal Engine 5 w systemie Niagara: cięcie ostrzem, energia, portal, meteor, miotacz ognia, wodospad, laser.</p>
+            <p>Effects made in Unreal Engine 5 with Niagara: blade slash, energy strike, portal, meteor, flamethrower, waterfall, laser.</p>
             <p class="soft">Unreal Engine · Niagara · Blender · Photoshop</p>
             <video src="gallery/niagara-vfx/baldeslash.mp4" poster="gallery/niagara-vfx/baldeslash.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/niagara-vfx/energystrike.mp4" poster="gallery/niagara-vfx/energystrike.jpg" autoplay muted loop playsinline></video>
@@ -300,309 +295,312 @@
             <video src="gallery/niagara-vfx/flamethrower.mp4" poster="gallery/niagara-vfx/flamethrower.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/niagara-vfx/waterfall.mp4" poster="gallery/niagara-vfx/waterfall.jpg" autoplay muted loop playsinline></video>
             <video src="gallery/niagara-vfx/laserbeam.mp4" poster="gallery/niagara-vfx/laserbeam.jpg" autoplay muted loop playsinline></video>
-            <a class="as-link" href="https://www.artstation.com/artwork/XJ0VBa">Zobacz na ArtStation ↗</a>
+            <a class="as-link" href="https://www.artstation.com/artwork/XJ0VBa">View on ArtStation ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/desert/render1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Desert Environment</span><span class="work-tags">Unreal Engine · Substance Designer</span></span>
+            <span class="work-meta"><span class="idx">Personal</span><span class="work-title">Desert Environment</span><span class="work-tags">Unreal Engine · Substance Designer</span></span>
           </button>
           <template>
-            <p>Pustynne środowisko w Unreal Engine.</p>
+            <p>A desert environment in Unreal Engine.</p>
             <p class="soft">Unreal Engine · Substance 3D Designer · Substance 3D Painter · Blender · ZBrush · Marmoset Toolbag · Photoshop</p>
             <video src="gallery/desert/render1.mp4" poster="gallery/desert/render1.jpg" autoplay muted loop playsinline></video>
-            <img src="gallery/desert/1.jpg" alt="Pustynia, ujęcie 1">
-            <img src="gallery/desert/2.jpg" alt="Pustynia, ujęcie 2">
-            <img src="gallery/desert/3.jpg" alt="Pustynia, ujęcie 3">
-            <img src="gallery/desert/4.jpg" alt="Pustynia, ujęcie 4">
-            <a class="as-link" href="https://www.artstation.com/artwork/L4B8Jk">Zobacz na ArtStation ↗</a>
+            <img src="gallery/desert/1.jpg" alt="Desert, shot 1">
+            <img src="gallery/desert/2.jpg" alt="Desert, shot 2">
+            <img src="gallery/desert/3.jpg" alt="Desert, shot 3">
+            <img src="gallery/desert/4.jpg" alt="Desert, shot 4">
+            <a class="as-link" href="https://www.artstation.com/artwork/L4B8Jk">View on ArtStation ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/chaos-vehicle/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">Chaos Vehicle</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
+            <span class="work-meta"><span class="idx">Personal</span><span class="work-title">Chaos Vehicle</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
           </button>
           <template>
-            <p>Mechanika wsiadania i wysiadania z pojazdu na systemie Chaos Vehicle w Unreal Engine.</p>
+            <p>Vehicle enter and exit mechanic built on the Chaos Vehicle system in Unreal Engine.</p>
             <p class="soft">Unreal Engine · Blueprints</p>
             <video src="gallery/chaos-vehicle/nodes.mp4" poster="gallery/chaos-vehicle/nodes.jpg" autoplay muted loop playsinline></video>
-            <img src="gallery/chaos-vehicle/cover.jpg" alt="Pojazd w Unreal Engine">
-            <a class="as-link" href="https://www.artstation.com/artwork/8Bg1Ox">Pełne wideo na ArtStation ↗</a>
+            <img src="gallery/chaos-vehicle/cover.jpg" alt="Vehicle in Unreal Engine">
+            <a class="as-link" href="https://www.artstation.com/artwork/8Bg1Ox">Full video on ArtStation ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/platformer/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Osobiste</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
+            <span class="work-meta"><span class="idx">Personal</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
           </button>
           <template>
-            <p>Mechaniki platformówki 2D: sterowanie, animacje postaci i przeciwników, behaviour tree.</p>
-            <img src="gallery/platformer/cover.jpg" alt="Platformówka 2D, gameplay">
+            <p>2D platformer mechanics: controls, player and enemy animations, behaviour tree.</p>
+            <img src="gallery/platformer/cover.jpg" alt="2D platformer, gameplay">
             <ul class="vids">
               <li><a href="https://www.youtube.com/watch?v=nP35rtMZbsk">Gameplay</a></li>
               <li><a href="https://www.youtube.com/watch?v=WmUeNhUsOrw">Behaviour tree</a></li>
-              <li><a href="https://www.youtube.com/watch?v=79-9h46JWiY">Animacje postaci</a></li>
-              <li><a href="https://www.youtube.com/watch?v=HwtHyMv5gVQ">Animacje przeciwnika</a></li>
-              <li><a href="https://www.youtube.com/watch?v=27OqIJZiGGg">Blueprinty</a></li>
+              <li><a href="https://www.youtube.com/watch?v=79-9h46JWiY">Character animations</a></li>
+              <li><a href="https://www.youtube.com/watch?v=HwtHyMv5gVQ">Enemy animations</a></li>
+              <li><a href="https://www.youtube.com/watch?v=27OqIJZiGGg">Blueprints</a></li>
             </ul>
-            <a class="as-link" href="https://www.artstation.com/artwork/98VAPa">Zobacz na ArtStation ↗</a>
+            <a class="as-link" href="https://www.artstation.com/artwork/98VAPa">View on ArtStation ↗</a>
           </template>
         </article>
-        <h3 class="group-label">Modele 3D</h3>
+        <h3 class="group-label">3D models</h3>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/fm2-series/cover.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Modele 3D</span><span class="work-title">Front Mission 2 Remake — Tank Series</span><span class="work-tags">Blender · Substance · Unity</span></span>
+            <span class="work-meta"><span class="idx">3D models</span><span class="work-title">Front Mission 2 Remake — Tank Series</span><span class="work-tags">Blender · Substance · Unity</span></span>
           </button>
           <template>
-            <p>Seria czołgów, które zaprojektowałem i wykonałem do remake'u Front Mission 2 na Nintendo Switch.</p>
+            <p>A series of tanks I designed and built for the Front Mission 2 remake on Nintendo Switch.</p>
             <p class="soft">Blender · Unity · Marmoset Toolbag · Substance 3D Painter · RizomUV · Photoshop</p>
-            <img src="gallery/fm2-series/render-3.jpg" alt="Czołg z Front Mission 2, render">
-            <img src="gallery/fm2-series/render-4.jpg" alt="Czołg z Front Mission 2, render">
-            <img src="gallery/fm2-series/unity-1.jpg" alt="Czołg z Front Mission 2 w Unity">
-            <img src="gallery/fm2-series/render-1.jpg" alt="Czołg z Front Mission 2, render">
-            <img src="gallery/fm2-series/render-5.jpg" alt="Czołg z Front Mission 2, render">
-            <img src="gallery/fm2-series/unity-3.jpg" alt="Czołg z Front Mission 2 w Unity">
-            <img src="gallery/fm2-series/a33859b-kompo-1.jpg" alt="Czołg z Front Mission 2, kompozycja">
-            <a class="as-link" href="https://www.artstation.com/artwork/o250JL">Zobacz na ArtStation ↗</a>
+            <img src="gallery/fm2-series/render-3.jpg" alt="Front Mission 2 tank, render">
+            <img src="gallery/fm2-series/render-4.jpg" alt="Front Mission 2 tank, render">
+            <img src="gallery/fm2-series/unity-1.jpg" alt="Front Mission 2 tank in Unity">
+            <img src="gallery/fm2-series/render-1.jpg" alt="Front Mission 2 tank, render">
+            <img src="gallery/fm2-series/render-5.jpg" alt="Front Mission 2 tank, render">
+            <img src="gallery/fm2-series/unity-3.jpg" alt="Front Mission 2 tank in Unity">
+            <img src="gallery/fm2-series/a33859b-kompo-1.jpg" alt="Front Mission 2 tank, composition">
+            <a class="as-link" href="https://www.artstation.com/artwork/o250JL">View on ArtStation ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/fm2-tank/render1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Modele 3D</span><span class="work-title">Front Mission 2 Remake — Tank</span><span class="work-tags">Blender · Substance · Unity</span></span>
+            <span class="work-meta"><span class="idx">3D models</span><span class="work-title">Front Mission 2 Remake — Tank</span><span class="work-tags">Blender · Substance · Unity</span></span>
           </button>
           <template>
-            <p>Model zaprojektowany i wykonany do remake'u Front Mission 2 na Nintendo Switch.</p>
+            <p>A model I designed and built for the Front Mission 2 remake on Nintendo Switch.</p>
             <p class="soft">Blender · Unity · Marmoset Toolbag · Substance 3D Painter · RizomUV · Photoshop</p>
-            <img src="gallery/fm2-tank/render1.jpg" alt="Czołg, render 1">
-            <img src="gallery/fm2-tank/render2.jpg" alt="Czołg, render 2">
-            <img src="gallery/fm2-tank/render3.jpg" alt="Czołg, render 3">
-            <img src="gallery/fm2-tank/screenshot-1.jpg" alt="Czołg w grze">
-            <img src="gallery/fm2-tank/kompo-1.jpg" alt="Czołg, kompozycja">
-            <a class="as-link" href="https://www.artstation.com/artwork/03wanY">Zobacz na ArtStation ↗</a>
+            <img src="gallery/fm2-tank/render1.jpg" alt="Tank, render 1">
+            <img src="gallery/fm2-tank/render2.jpg" alt="Tank, render 2">
+            <img src="gallery/fm2-tank/render3.jpg" alt="Tank, render 3">
+            <img src="gallery/fm2-tank/screenshot-1.jpg" alt="Tank in game">
+            <img src="gallery/fm2-tank/kompo-1.jpg" alt="Tank, composition">
+            <a class="as-link" href="https://www.artstation.com/artwork/03wanY">View on ArtStation ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/heater/back.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Modele 3D</span><span class="work-title">Heater Prop</span><span class="work-tags">Blender · Substance · Unity</span></span>
+            <span class="work-meta"><span class="idx">3D models</span><span class="work-title">Heater Prop</span><span class="work-tags">Blender · Substance · Unity</span></span>
           </button>
           <template>
-            <p>Game-ready props do gry On The Road.</p>
+            <p>Game-ready props for On The Road.</p>
             <p class="soft">Blender · Substance 3D Painter · RizomUV · Unity · Photoshop</p>
-            <img src="gallery/heater/back.jpg" alt="Grzejnik, tył">
-            <img src="gallery/heater/front.jpg" alt="Grzejnik, przód">
-            <img src="gallery/heater/side.jpg" alt="Grzejnik, bok">
-            <a class="as-link" href="https://www.artstation.com/artwork/QXKDKl">Zobacz na ArtStation ↗</a>
+            <img src="gallery/heater/back.jpg" alt="Heater, back">
+            <img src="gallery/heater/front.jpg" alt="Heater, front">
+            <img src="gallery/heater/side.jpg" alt="Heater, side">
+            <a class="as-link" href="https://www.artstation.com/artwork/QXKDKl">View on ArtStation ↗</a>
           </template>
         </article>
       </div>
-      <a class="more" href="https://www.artstation.com/kacperfilas">Więcej na ArtStation ↗</a>
+      <a class="more" href="https://www.artstation.com/kacperfilas">More on ArtStation ↗</a>
     </section>
 
-    <section id="gry" class="section">
+    <section id="games" class="section">
       <div class="head split">
         <div>
-          <p class="label">// Wydane gry</p>
-          <h2>Gry, przy których pracowałem</h2>
+          <p class="label">// Shipped games</p>
+          <h2>Games I worked on</h2>
         </div>
-        <p class="intro">Produkcje mobilne, PC i konsolowe, przy których pracowałem.</p>
+        <p class="intro">Mobile, PC and console titles I contributed to.</p>
       </div>
       <div class="works games">
         <article class="work">
           <button class="work-cover">
-            <img src="gallery/games/th-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Trophy Hunter</span><span class="work-tags">Ten Square Games</span></span>
+            <img src="gallery/games/th-1.jpg" alt="" loading="lazy" style="object-position: left center">
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Trophy Hunter</span><span class="work-tags">Ten Square Games</span></span>
           </button>
           <template>
-            <p>Level &amp; Technical Artist: narzędzia edytorowe, shadery, optymalizacja pod mobile, level art, VFX i animacje.</p>
+            <p>Technical Artist: editor tools, shaders, mobile optimization, level art, VFX and animation.</p>
             <p class="soft">Ten Square Games · iOS, Android</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/th-1.jpg" alt="Trophy Hunter, oficjalny screen">
-              <img loading="lazy" src="gallery/games/th-2.jpg" alt="Trophy Hunter, oficjalny screen">
-              <img loading="lazy" src="gallery/games/th-3.jpg" alt="Trophy Hunter, oficjalny screen">
+              <img loading="lazy" src="gallery/games/th-1.jpg" alt="Trophy Hunter, official screenshot">
+              <img loading="lazy" src="gallery/games/th-2.jpg" alt="Trophy Hunter, official screenshot">
+              <img loading="lazy" src="gallery/games/th-3.jpg" alt="Trophy Hunter, official screenshot">
             </div>
-            <a class="as-link" href="https://apps.apple.com/us/app/trophy-hunter-sniper-game/id6746784052">Zobacz w App Store ↗</a>
+            <a class="as-link" href="https://apps.apple.com/us/app/trophy-hunter-sniper-game/id6746784052">View on the App Store ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fc-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Fishing Clash</span><span class="work-tags">Ten Square Games</span></span>
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Fishing Clash</span><span class="work-tags">Ten Square Games</span></span>
           </button>
           <template>
+            <p>Level &amp; 3D Artist: level art and 3D art.</p>
             <p class="soft">Ten Square Games · iOS, Android</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/fc-1.jpg" alt="Fishing Clash, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fc-2.jpg" alt="Fishing Clash, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fc-3.jpg" alt="Fishing Clash, oficjalny screen">
+              <img loading="lazy" src="gallery/games/fc-1.jpg" alt="Fishing Clash, official screenshot">
+              <img loading="lazy" src="gallery/games/fc-2.jpg" alt="Fishing Clash, official screenshot">
+              <img loading="lazy" src="gallery/games/fc-3.jpg" alt="Fishing Clash, official screenshot">
             </div>
-            <a class="as-link" href="https://apps.apple.com/us/app/fishing-clash-sport-simulator/id1151811380">Zobacz w App Store ↗</a>
+            <a class="as-link" href="https://apps.apple.com/us/app/fishing-clash-sport-simulator/id1151811380">View on the App Store ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
-            <img src="gallery/games/mh-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Medal Hunter</span><span class="work-tags">Ten Square Games</span></span>
+            <img src="gallery/games/mh-1.jpg" alt="" loading="lazy" style="object-position: left center">
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Medal Hunter</span><span class="work-tags">Ten Square Games</span></span>
           </button>
           <template>
+            <p>Level &amp; Technical Artist: level art and technical art.</p>
             <p class="soft">Ten Square Games · iOS, Android</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/mh-1.jpg" alt="Medal Hunter, oficjalny screen">
-              <img loading="lazy" src="gallery/games/mh-2.jpg" alt="Medal Hunter, oficjalny screen">
-              <img loading="lazy" src="gallery/games/mh-3.jpg" alt="Medal Hunter, oficjalny screen">
+              <img loading="lazy" src="gallery/games/mh-1.jpg" alt="Medal Hunter, official screenshot">
+              <img loading="lazy" src="gallery/games/mh-2.jpg" alt="Medal Hunter, official screenshot">
+              <img loading="lazy" src="gallery/games/mh-3.jpg" alt="Medal Hunter, official screenshot">
             </div>
-            <a class="as-link" href="https://apps.apple.com/us/app/medal-hunter-military-game/id6762197056">Zobacz w App Store ↗</a>
+            <a class="as-link" href="https://apps.apple.com/us/app/medal-hunter-military-game/id6762197056">View on the App Store ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/games/hc-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Heavy Cargo</span><span class="work-tags">PC</span></span>
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Heavy Cargo</span><span class="work-tags">PC</span></span>
           </button>
           <template>
+            <p>3D Artist: 3D models.</p>
             <p class="soft">PC</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/hc-1.jpg" alt="Heavy Cargo, oficjalny screen">
-              <img loading="lazy" src="gallery/games/hc-2.jpg" alt="Heavy Cargo, oficjalny screen">
-              <img loading="lazy" src="gallery/games/hc-3.jpg" alt="Heavy Cargo, oficjalny screen">
+              <img loading="lazy" src="gallery/games/hc-1.jpg" alt="Heavy Cargo, official screenshot">
+              <img loading="lazy" src="gallery/games/hc-2.jpg" alt="Heavy Cargo, official screenshot">
+              <img loading="lazy" src="gallery/games/hc-3.jpg" alt="Heavy Cargo, official screenshot">
             </div>
-            <a class="as-link" href="https://store.steampowered.com/app/1474930/">Zobacz w Steam ↗</a>
+            <a class="as-link" href="https://store.steampowered.com/app/1474930/">View on Steam ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/games/dkcr-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Donkey Kong Country Returns HD</span><span class="work-tags">Forever Entertainment</span></span>
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Donkey Kong Country Returns HD</span><span class="work-tags">Forever Entertainment</span></span>
           </button>
           <template>
-            <p>Level &amp; VFX Artist: projektowanie poziomów i stylizowane efekty VFX.</p>
+            <p>Level &amp; VFX Artist: level design and stylized VFX.</p>
             <p class="soft">Forever Entertainment · Nintendo Switch</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/dkcr-1.jpg" alt="Donkey Kong Country Returns HD, oficjalny screen">
-              <img loading="lazy" src="gallery/games/dkcr-2.jpg" alt="Donkey Kong Country Returns HD, oficjalny screen">
-              <img loading="lazy" src="gallery/games/dkcr-3.jpg" alt="Donkey Kong Country Returns HD, oficjalny screen">
+              <img loading="lazy" src="gallery/games/dkcr-1.jpg" alt="Donkey Kong Country Returns HD, official screenshot">
+              <img loading="lazy" src="gallery/games/dkcr-2.jpg" alt="Donkey Kong Country Returns HD, official screenshot">
+              <img loading="lazy" src="gallery/games/dkcr-3.jpg" alt="Donkey Kong Country Returns HD, official screenshot">
             </div>
-            <a class="as-link" href="https://www.nintendo.com/us/store/products/donkey-kong-country-returns-hd-switch/">Zobacz w Nintendo ↗</a>
+            <a class="as-link" href="https://www.nintendo.com/us/store/products/donkey-kong-country-returns-hd-switch/">View on Nintendo ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fm1-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Front Mission 1st: Remake</span><span class="work-tags">Forever Entertainment</span></span>
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Front Mission 1st: Remake</span><span class="work-tags">Forever Entertainment</span></span>
           </button>
           <template>
-            <p>Modele środowisk, assetów i propsów, oświetlenie scen i integracja w Unity.</p>
-            <p class="soft">Forever Entertainment · Switch, PC, konsole</p>
+            <p>Level art, environment and prop models, scene lighting and Unity integration.</p>
+            <p class="soft">Forever Entertainment · Switch, PC, consoles</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/fm1-1.jpg" alt="Front Mission 1st: Remake, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fm1-2.jpg" alt="Front Mission 1st: Remake, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fm1-3.jpg" alt="Front Mission 1st: Remake, oficjalny screen">
+              <img loading="lazy" src="gallery/games/fm1-1.jpg" alt="Front Mission 1st: Remake, official screenshot">
+              <img loading="lazy" src="gallery/games/fm1-2.jpg" alt="Front Mission 1st: Remake, official screenshot">
+              <img loading="lazy" src="gallery/games/fm1-3.jpg" alt="Front Mission 1st: Remake, official screenshot">
             </div>
-            <a class="as-link" href="https://store.steampowered.com/app/2399730/">Zobacz w Steam ↗</a>
+            <a class="as-link" href="https://store.steampowered.com/app/2399730/">View on Steam ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fm2-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Front Mission 2: Remake</span><span class="work-tags">Forever Entertainment</span></span>
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Front Mission 2: Remake</span><span class="work-tags">Forever Entertainment</span></span>
           </button>
           <template>
-            <p>Modele środowisk, assetów i propsów (w tym seria czołgów), oświetlenie scen i integracja w Unity.</p>
-            <p class="soft">Forever Entertainment · Switch, PC, konsole</p>
+            <p>Level art, environment and prop models, scene lighting and Unity integration.</p>
+            <p class="soft">Forever Entertainment · Switch, PC, consoles</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/fm2-1.jpg" alt="Front Mission 2: Remake, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fm2-2.jpg" alt="Front Mission 2: Remake, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fm2-3.jpg" alt="Front Mission 2: Remake, oficjalny screen">
+              <img loading="lazy" src="gallery/games/fm2-1.jpg" alt="Front Mission 2: Remake, official screenshot">
+              <img loading="lazy" src="gallery/games/fm2-2.jpg" alt="Front Mission 2: Remake, official screenshot">
+              <img loading="lazy" src="gallery/games/fm2-3.jpg" alt="Front Mission 2: Remake, official screenshot">
             </div>
-            <a class="as-link" href="https://store.steampowered.com/app/2865440/">Zobacz w Steam ↗</a>
+            <a class="as-link" href="https://store.steampowered.com/app/2865440/">View on Steam ↗</a>
           </template>
         </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/games/fm3-1.jpg" alt="" loading="lazy">
-            <span class="work-meta"><span class="idx">Wydane gry</span><span class="work-title">Front Mission 3: Remake</span><span class="work-tags">Forever Entertainment</span></span>
+            <span class="work-meta"><span class="idx">Shipped games</span><span class="work-title">Front Mission 3: Remake</span><span class="work-tags">Forever Entertainment</span></span>
           </button>
           <template>
-            <p>Modele środowisk, assetów i propsów, oświetlenie scen i integracja w Unity.</p>
-            <p class="soft">Forever Entertainment · Switch, PC, konsole</p>
+            <p>Level art, environment and prop models, scene lighting and Unity integration.</p>
+            <p class="soft">Forever Entertainment · Switch, PC, consoles</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/games/fm3-1.jpg" alt="Front Mission 3: Remake, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fm3-2.jpg" alt="Front Mission 3: Remake, oficjalny screen">
-              <img loading="lazy" src="gallery/games/fm3-3.jpg" alt="Front Mission 3: Remake, oficjalny screen">
+              <img loading="lazy" src="gallery/games/fm3-1.jpg" alt="Front Mission 3: Remake, official screenshot">
+              <img loading="lazy" src="gallery/games/fm3-2.jpg" alt="Front Mission 3: Remake, official screenshot">
+              <img loading="lazy" src="gallery/games/fm3-3.jpg" alt="Front Mission 3: Remake, official screenshot">
             </div>
-            <a class="as-link" href="https://store.steampowered.com/app/3795900/">Zobacz w Steam ↗</a>
+            <a class="as-link" href="https://store.steampowered.com/app/3795900/">View on Steam ↗</a>
           </template>
         </article>
       </div>
     </section>
 
-    <section id="uslugi" class="section">
+    <section id="services" class="section">
       <div class="head split">
         <div>
-          <p class="label">// Czym się zajmuję</p>
-          <h2>Tech art od narzędzia do gotowej sceny</h2>
+          <p class="label">// What I do</p>
+          <h2>Art and tech, both sides</h2>
         </div>
-        <p class="intro">Pracuję na styku artystów i programistów: buduję pipeline, rozwiązuję problemy z renderingiem i dowożę grafikę, która mieści się w budżecie wydajności.</p>
+        <p class="intro">I build tools and pipelines, fix rendering issues and keep visuals within the performance budget.</p>
       </div>
       <ol class="services">
-        <li><span>01</span><h3>Narzędzia i automatyzacja</h3><p>Narzędzia edytorowe w Unity i Blenderze, skrypty w C# i Pythonie: walidacja assetów, konwencje nazw, automatyczny import, materiały i prefaby z szablonów. Pipeline'y z AI w ComfyUI.</p></li>
-        <li><span>02</span><h3>Shadery i optymalizacja</h3><p>Shadery w HLSL i Shader Graph, materiały i assety pod budżety mobilne, profilowanie scen.</p></li>
-        <li><span>03</span><h3>Level i environment art</h3><p>Sceny od blockoutu do finalnego światła, tereny z danych GIS i Gaea, level design.</p></li>
-        <li><span>04</span><h3>VFX i animacja</h3><p>Efekty w Particle System, VFX Graph i Niagarze, animacje w Animatorze i Timeline.</p></li>
+        <li><span>01</span><h3>Tools &amp; automation</h3><p>Editor tools in Unity and Blender, C# and Python scripts: asset validation, naming conventions, automated import, materials and prefabs from templates. AI pipelines in ComfyUI.</p></li>
+        <li><span>02</span><h3>Shaders &amp; optimization</h3><p>Shaders in HLSL and Shader Graph, materials and assets built to performance budgets, scene profiling.</p></li>
+        <li><span>03</span><h3>Level &amp; environment art</h3><p>Scenes from blockout to final lighting, terrain from GIS data and Gaea, level design.</p></li>
+        <li><span>04</span><h3>VFX &amp; animation</h3><p>Effects in Particle System, VFX Graph and Niagara, animation with Animator and Timeline.</p></li>
       </ol>
     </section>
 
-    <section id="doswiadczenie" class="section">
+    <section id="experience" class="section">
       <div class="head">
-        <p class="label">// Doświadczenie</p>
-        <h2>Gdzie pracowałem</h2>
+        <p class="label">// Experience</p>
+        <h2>Where I’ve worked</h2>
       </div>
       <ol class="jobs">
-        <li><span class="when">2025 — teraz</span><div><h3>Ten Square Games</h3><p class="what">Level &amp; Technical Artist</p><p>Narzędzia edytorowe automatyzujące pipeline assetów w Unity: walidacja kompletności assetów, konwencje nazw, automatyczne ustawienia importu, materiały i prefaby z szablonów, generowanie plików danych z assetów. Do tego shadery i optymalizacja pod mobile, level art, VFX i animacje. Trophy Hunter.</p></div></li>
-        <li><span class="when">2024 — 2025</span><div><h3>YSLAB</h3><p class="what">Level &amp; Environment Artist</p><p>Interaktywne środowiska w Unity i UE5 z danych przestrzennych (GIS, LiDAR, Gaea, Cesium), pipeline produkcji wspierany AI.</p></div></li>
-        <li><span class="when">2023 — 2024</span><div><h3>Ten Square Games</h3><p class="what">3D Artist</p><p>Modele, tekstury i implementacja assetów w Unity, narzędzia w Unity i Blenderze, stylizowane VFX.</p></div></li>
-        <li><span class="when">2022 — 2023</span><div><h3>Forever Entertainment</h3><p class="what">Level &amp; VFX Artist</p><p>Levele i VFX do Donkey Kong Country Returns HD, środowiska i propsy do remake'ów Front Mission 1–3.</p></div></li>
-        <li><span class="when">2021 — 2022</span><div><h3>Scanologics</h3><p class="what">3D Sculpting Artist</p><p>Sculpting i czyszczenie skanów 3D w ZBrushu, UV i tekstury pod platformy AR i web.</p></div></li>
+        <li><span class="when">2025 — present</span><div><h3>Ten Square Games</h3><p class="what">Technical Artist</p><p>Editor tools that automate the Unity asset pipeline: asset completeness validation, naming conventions, automated import settings, materials and prefabs from templates, data file generation from assets. Plus shaders and mobile optimization, level art, VFX and animation. Trophy Hunter.</p></div></li>
+        <li><span class="when">2024 — 2025</span><div><h3>YSLAB</h3><p class="what">Level &amp; Environment Artist</p><p>Interactive environments in Unity and UE5 built from spatial data (GIS, LiDAR, Gaea, Cesium), with an AI-assisted production pipeline.</p></div></li>
+        <li><span class="when">2023 — 2024</span><div><h3>Ten Square Games</h3><p class="what">3D Artist</p><p>Models, textures and asset implementation in Unity, tools in Unity and Blender, stylized VFX.</p></div></li>
+        <li><span class="when">2022 — 2023</span><div><h3>Forever Entertainment</h3><p class="what">Level &amp; VFX Artist</p><p>Levels and VFX for Donkey Kong Country Returns HD, level art and props for the Front Mission 1–3 remakes.</p></div></li>
+        <li><span class="when">2021 — 2022</span><div><h3>Scanologics</h3><p class="what">3D Sculpting Artist</p><p>Sculpting and cleanup of 3D scans in ZBrush, UVs and textures for AR and web platforms.</p></div></li>
       </ol>
       <div class="skills">
-        <div><h3>Silniki</h3><p>Unity (Animator, Timeline, Particle System, VFX Graph), Unreal Engine 5 (Niagara, Blueprints)</p></div>
-        <div><h3>Tech art</h3><p>HLSL, C#, Python, narzędzia edytorowe, automatyzacja, optymalizacja mobile, profilowanie</p></div>
-        <div><h3>3D</h3><p>Blender, ZBrush, 3DCoat, Substance Painter i Designer, Marmoset, RizomUV, retopologia, rigging</p></div>
-        <div><h3>Pipeline</h3><p>Gaea, GIS, fotogrametria, ComfyUI, pipeline'y z AI, Git, Plastic SCM, Jira</p></div>
+        <div><h3>Engines</h3><p>Unity (Animator, Timeline, Particle System, VFX Graph), Unreal Engine 5 (Niagara, Blueprints)</p></div>
+        <div><h3>Tech art</h3><p>HLSL, C#, Python, editor tools, automation, mobile optimization, profiling</p></div>
+        <div><h3>3D</h3><p>Blender, ZBrush, 3DCoat, Substance Painter and Designer, Marmoset, RizomUV, retopology, rigging</p></div>
+        <div><h3>Pipeline</h3><p>Gaea, GIS, photogrammetry, ComfyUI, AI pipelines, Git, Plastic SCM, Jira</p></div>
       </div>
     </section>
 
-    <section id="kontakt" class="section contact">
-      <p class="label">// Kontakt</p>
-      <h2>Porozmawiajmy o Twoim projekcie</h2>
+    <section id="contact" class="section contact">
+      <p class="label">// Contact</p>
+      <h2>Let’s talk about your project</h2>
       <a class="mail" href="mailto:kacperfilas1@gmail.com">kacperfilas1@gmail.com</a>
       <ul class="links">
         <li><a href="https://www.artstation.com/kacperfilas">ArtStation ↗</a></li>
         <li><a href="https://www.linkedin.com/in/kacper-filas-074a0b1b5">LinkedIn ↗</a></li>
         <li><a href="https://github.com/KacperFilas">GitHub ↗</a></li>
       </ul>
-      <p class="soft">Narzędzia open source: <a href="https://github.com/KacperFilas/Setup-Toon-Shader">Setup-Toon-Shader</a>, <a href="https://github.com/KacperFilas/Export-Collection-Blender">Export-Collection-Blender</a> (add-ony do Blendera).</p>
+      <p class="soft">Open-source tools: <a href="https://github.com/KacperFilas/Setup-Toon-Shader">Setup-Toon-Shader</a>, <a href="https://github.com/KacperFilas/Export-Collection-Blender">Export-Collection-Blender</a> (Blender add-ons).</p>
     </section>
   </main>
 
-  <footer><span>© Kacper Filas</span><span>Wrocław, Polska</span></footer>
+  <footer><span>© Kacper Filas</span><span>Wrocław, Poland</span></footer>
 
   <dialog id="project" aria-labelledby="project-title">
     <div class="project-panel">
       <div class="project-head">
         <span class="idx"></span>
         <h2 id="project-title"></h2>
-        <form method="dialog"><button class="close" aria-label="Zamknij">×</button></form>
+        <form method="dialog"><button class="close" aria-label="Close">×</button></form>
       </div>
       <div class="project-body"></div>
     </div>
   </dialog>
 
-  <dialog id="zoom" aria-label="Powiększenie"><img alt=""></dialog>
+  <dialog id="zoom" aria-label="Zoom"><img alt=""></dialog>
 
   <script>
     const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
