@@ -113,18 +113,30 @@
         </article>
         <article class="work wide">
           <button class="work-cover">
-            <img src="gallery/comfyui/3d-model-generation-2.jpg" alt="" loading="lazy">
+            <img src="gallery/comfyui/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Tools</span><span class="work-title">AI asset pipeline — ComfyUI</span><span class="work-tags">ComfyUI · Trellis 2 · Hunyuan3D</span></span>
           </button>
           <template>
-            <p>ComfyUI workflows for fast asset prototyping: 3D model generation from a single image (background removal, Trellis 2 / Hunyuan3D, GLB export with PBR textures), plus texture and weapon skin generation. Settings are grouped in one place so an artist only changes a few parameters.</p>
-            <p class="soft">ComfyUI · Trellis 2 · Hunyuan3D</p>
+            <p>ComfyUI workflows for fast asset production. Settings are grouped in one place, so an artist only changes a few parameters and gets game-ready output.</p>
+            <p class="soft">ComfyUI · Trellis 2 · Hunyuan3D · Chord · Blender</p>
+            <h3>Image to 3D</h3>
+            <p>A single image goes in; background removal, shape and PBR texture generation, remeshing, UV unwrap and baking run automatically, and a textured GLB comes out with a target triangle count.</p>
             <div class="tiles wide">
-              <img loading="lazy" src="gallery/comfyui/3d-model-generation-1.jpg" alt="Workflow ComfyUI: 3d model generation 1">
-              <img loading="lazy" src="gallery/comfyui/3d-model-generation-2.jpg" alt="Workflow ComfyUI: 3d model generation 2">
-              <img loading="lazy" src="gallery/comfyui/skin-generation.jpg" alt="Workflow ComfyUI: skin generation">
-              <img loading="lazy" src="gallery/comfyui/texture-generation-1.jpg" alt="Workflow ComfyUI: texture generation 1">
-              <img loading="lazy" src="gallery/comfyui/texture-generation-2.jpg" alt="Workflow ComfyUI: texture generation 2">
+              <img loading="lazy" src="gallery/comfyui/stump-showcase.jpg" alt="Input image, the generated low-poly tree stump and its topology">
+              <img loading="lazy" src="gallery/comfyui/trellis-workflow.jpg" alt="TRELLIS.2 image-to-3D workflow in ComfyUI">
+            </div>
+            <h3>Seamless PBR textures</h3>
+            <p>A text prompt becomes a tileable texture, and a material-estimation model derives normal, height, roughness and metalness maps from it.</p>
+            <div class="tiles wide">
+              <img loading="lazy" src="gallery/comfyui/pbr-material.jpg" alt="Generated cobblestone and rusty metal materials rendered with displacement, with their PBR maps">
+              <img loading="lazy" src="gallery/comfyui/pbr-workflow.jpg" alt="Seamless PBR texture workflow in ComfyUI">
+            </div>
+            <h3>Weapon skins</h3>
+            <p>New skin variants painted onto an existing weapon UV layout, with the PBR maps estimated and packed into the game's mask texture.</p>
+            <div class="tiles wide">
+              <img loading="lazy" src="gallery/comfyui/skins-1.jpg" alt="Generated weapon skin variants">
+              <img loading="lazy" src="gallery/comfyui/skins-2.jpg" alt="Generated weapon skin variants">
+              <img loading="lazy" src="gallery/comfyui/skins-3.jpg" alt="Generated weapon skin variants">
             </div>
           </template>
         </article>
