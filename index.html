@@ -52,6 +52,7 @@
           <li><span class="mark">Zb</span>ZBrush</li>
           <li><img src="gallery/icons/adobephotoshop.svg" alt="">Photoshop</li>
           <li><span class="mark">Cf</span>ComfyUI</li>
+          <li><span class="mark">3D</span>3D AI tools</li>
           <li><img src="gallery/icons/python.svg" alt="">Python</li>
           <li><span class="mark">C#</span>C# / HLSL</li>
           <li><span class="mark">Mt</span>Marmoset Toolbag</li>
@@ -111,7 +112,7 @@
             <video src="gallery/kf-tools/deep-copy.mp4" poster="gallery/kf-tools/deep-copy.jpg" autoplay muted loop playsinline></video>
           </template>
         </article>
-        <article class="work wide">
+        <article class="work">
           <button class="work-cover">
             <img src="gallery/comfyui/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Tools</span><span class="work-title">AI asset pipeline — ComfyUI</span><span class="work-tags">ComfyUI · Trellis 2 · Hunyuan3D</span></span>
@@ -155,6 +156,21 @@
             <img src="gallery/scatter-tool/nodes-overview.jpg" alt="The full Geometry Nodes tree split into sections">
             <img src="gallery/scatter-tool/nodes-asset-surface.jpg" alt="Asset selection and surface point distribution sections">
             <img src="gallery/scatter-tool/nodes-scale-rotation.jpg" alt="Per-asset scale and rotation sections">
+          </template>
+        </article>
+        <article class="work">
+          <button class="work-cover">
+            <img src="gallery/substance/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">Tools</span><span class="work-title">Diffuse to PBR Material</span><span class="work-tags">Substance Designer · PBR</span></span>
+          </button>
+          <template>
+            <p><b>Problem:</b> stylized or AI-generated textures often come as a single color image, and painting height, normal, roughness and AO for every one of them by hand takes time.</p>
+            <p><b>Solution:</b> a Substance Designer graph that derives height, normal (with an extra fine-detail pass and a DirectX/OpenGL switch), roughness and ambient occlusion from the base color alone, with an optional make-it-tile pass. Over 30 exposed parameters let an artist tune the result without opening the graph, and it also runs headless through sbsrender for batch processing.</p>
+            <p class="soft">Substance Designer · sbsrender · PBR</p>
+            <div class="tiles wide">
+              <img loading="lazy" src="gallery/substance/showcase.jpg" alt="Base color input, generated height, normal, roughness and AO maps, and a material render">
+              <img loading="lazy" src="gallery/substance/graph.jpg" alt="Diffuse to PBR graph in Substance Designer">
+            </div>
           </template>
         </article>
         <article class="work">
@@ -310,6 +326,20 @@
             <a class="as-link" href="https://www.artstation.com/artwork/XJ0VBa">View on ArtStation ↗</a>
           </template>
         </article>
+        <article class="work wide">
+          <button class="work-cover">
+            <img src="gallery/mockups/cover.jpg" alt="" loading="lazy">
+            <span class="work-meta"><span class="idx">Personal</span><span class="work-title">Mobile Puzzle Game Mockups</span><span class="work-tags">Photoshop · AI · UI</span></span>
+          </button>
+          <template>
+            <p>Gameplay screen mockups for two mobile puzzle game concepts: screen layout, HUD, readable item silhouettes and a consistent art style. Base images generated with AI, then heavily painted over and composited in Photoshop.</p>
+            <p class="soft">Photoshop · AI image generation · Mobile UI</p>
+            <div class="tiles portrait" style="grid-template-columns: repeat(2, 1fr)">
+              <img loading="lazy" src="gallery/mockups/airport-sort.jpg" alt="Airport baggage sorting puzzle game mockup">
+              <img loading="lazy" src="gallery/mockups/shape-sort.jpg" alt="Shape sorting claw machine puzzle game mockup">
+            </div>
+          </template>
+        </article>
         <article class="work">
           <button class="work-cover">
             <img src="gallery/desert/render1.jpg" alt="" loading="lazy">
@@ -339,7 +369,7 @@
             <a class="as-link" href="https://www.artstation.com/artwork/8Bg1Ox">Full video on ArtStation ↗</a>
           </template>
         </article>
-        <article class="work">
+        <article class="work wide">
           <button class="work-cover">
             <img src="gallery/platformer/cover.jpg" alt="" loading="lazy">
             <span class="work-meta"><span class="idx">Personal</span><span class="work-title">2D platformer mechanics</span><span class="work-tags">Unreal Engine · Blueprints</span></span>
@@ -638,6 +668,7 @@
     // Klik w obrazek z galerii otwiera go na cały ekran; klik albo Esc zamyka.
     const zoom = document.getElementById('zoom');
     body.addEventListener('click', e => {
+      if (e.target.matches('.project-body video')) return e.target.requestFullscreen?.();
       if (!e.target.matches('.project-body img')) return;
       zoom.firstChild.src = e.target.src;
       zoom.firstChild.alt = e.target.alt;
