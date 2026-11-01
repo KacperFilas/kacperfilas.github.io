@@ -625,7 +625,6 @@
         <li><a href="https://www.linkedin.com/in/kacper-filas-074a0b1b5">LinkedIn ↗</a></li>
         <li><a href="https://github.com/KacperFilas">GitHub ↗</a></li>
       </ul>
-      <p class="soft">Open-source tools: <a href="https://github.com/KacperFilas/Setup-Toon-Shader">Setup-Toon-Shader</a>, <a href="https://github.com/KacperFilas/Export-Collection-Blender">Export-Collection-Blender</a> (Blender add-ons).</p>
     </section>
   </main>
 
@@ -652,17 +651,24 @@
     // Klik w kartę: zawartość <template> trafia do okna, więc wideo ładuje się dopiero po otwarciu.
     const dlg = document.getElementById('project');
     const body = dlg.querySelector('.project-body');
+    // Klipy grają tylko, gdy są widoczne — inaczej okno z 7 filmami ściąga wszystkie naraz.
+    const onScreen = new IntersectionObserver(entries => entries.forEach(e =>
+      e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()));
     document.querySelectorAll('.work-cover').forEach(btn => btn.addEventListener('click', () => {
       const work = btn.closest('.work');
       const content = work.querySelector('template').content.cloneNode(true);
-      if (calm) content.querySelectorAll('video').forEach(v => v.removeAttribute('autoplay'));
+      content.querySelectorAll('video').forEach(v => {
+        v.removeAttribute('autoplay');
+        v.preload = 'none';
+        if (!calm) onScreen.observe(v);
+      });
       dlg.querySelector('.idx').textContent = work.querySelector('.idx').textContent;
       dlg.querySelector('h2').textContent = work.querySelector('.work-title').textContent;
       body.replaceChildren(content);
       dlg.showModal();
       dlg.scrollTop = 0;
     }));
-    dlg.addEventListener('close', () => body.replaceChildren());
+    dlg.addEventListener('close', () => { onScreen.disconnect(); body.replaceChildren(); });
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 
     // Klik w obrazek z galerii otwiera go na cały ekran; klik albo Esc zamyka.
